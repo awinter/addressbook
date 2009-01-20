@@ -1,7 +1,8 @@
-<h1>Listing users</h1>
+<h1>Friends of <%= @user.first_name %></h1>
 
 <table>
   <tr>
+    <th>Friend?</th>
     <th>First name</th>
     <th>Last name</th>
     <th>Email</th>
@@ -15,6 +16,7 @@
 
 <% for user in @users %>
   <tr>
+    <td><%= check_box_tag "friend_ids[]", user.id, @user.friends.include?(user) %></td>
     <td><%=h user.first_name %></td>
     <td><%=h user.last_name %></td>
     <td><%=h user.email %></td>
