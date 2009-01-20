@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   skip_before_filter :require_user, :only => [:new, :create]
+  before_filter :require_admin_or_self, :only => [:edit, :update, :destroy]
   
   # GET /users
   # GET /users.xml
@@ -82,6 +83,15 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(users_url) }
       format.xml  { head :ok }
+    end
+  end
+
+  private
+  def require_admin_or_self
+    unless current_user.admin? || current_user == User.find(params[:id])
+      flash[:notice] = "You must be an admin to access this page"
+      redirect_to users_path
+      return false
     end
   end
 end
