@@ -3,6 +3,8 @@ ActionController::Routing::Routes.draw do |map|
     users.resources :friendships
   end
 
+  map.feed '/feed.rss', :controller => "feeds", :action => "index", :format => "rss"
+  
   map.resource :user_session
   map.root :controller => "user_sessions", :action => "new"
   
