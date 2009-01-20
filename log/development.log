@@ -713,3 +713,220 @@ Processing UserSessionsController#new (for 127.0.0.1 at 2009-01-20 10:41:19) [GE
 Rendering template within layouts/application
 Rendering user_sessions/new
 Completed in 14ms (View: 6, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-01-20 10:42:22) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"password"=>"[FILTERED]", "remember_me"=>"0", "email"=>"foo@gmail.com"}, "action"=>"create", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'foo@gmail.com') LIMIT 1[0m
+Cookie set: user_credentials=e507c6e1246eb8c7b7a4462e965017faa8e0ef2f34985138c7627396fc0a0d92c16dcf82256098c73382007665bb0b2e2f799a4c4197c2626560e1f29412f065; path=/
+Redirected to /users
+Completed in 14ms (DB: 0) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-20 10:42:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 18ms (View: 5, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-01-20 10:42:24) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 22ms (View: 8, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2009-01-20 10:43:31) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Cookie set: user_credentials=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://localhost:3000/user_session/new
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/user_session]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-01-20 10:43:31) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-20 10:43:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Redirected to http://localhost:3000/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/users]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-01-20 10:43:38) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 15ms (View: 6, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-01-20 10:43:43) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Completed in 20ms (View: 12, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-01-20 10:45:35) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'e507c6e1246eb8c7b7a4462e965017faa8e0ef2f34985138c7627396fc0a0d92c16dcf82256098c73382007665bb0b2e2f799a4c4197c2626560e1f29412f065') LIMIT 1[0m
+Completed in 101ms (View: 92, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-01-20 10:45:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 19ms (View: 10, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-01-20 10:46:38) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 19ms (View: 9, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-01-20 10:46:42) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 19ms (View: 9, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-20 10:47:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 19ms (View: 6, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2009-01-20 10:47:17) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Cookie set: user_credentials=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to /users
+Completed in 14ms (DB: 0) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-20 10:47:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Redirected to http://localhost:3000/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/users]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-01-20 10:47:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-01-20 10:47:27) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"password"=>"[FILTERED]", "remember_me"=>"0", "email"=>"foo@gmail.com"}, "action"=>"create", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'foo@gmail.com') LIMIT 1[0m
+Cookie set: user_credentials=e507c6e1246eb8c7b7a4462e965017faa8e0ef2f34985138c7627396fc0a0d92c16dcf82256098c73382007665bb0b2e2f799a4c4197c2626560e1f29412f065; path=/
+Redirected to /users
+Completed in 16ms (DB: 1) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-20 10:47:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 23ms (View: 7, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2009-01-20 10:47:30) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Cookie set: user_credentials=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://localhost:3000/user_session/new
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/user_session]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-01-20 10:47:30) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 14ms (View: 5, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-01-20 10:47:32) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Completed in 21ms (View: 12, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-01-20 10:47:56) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Completed in 19ms (View: 12, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-01-20 10:48:21) [POST]
+  Parameters: {"user"=>{"city"=>"", "zip"=>"", "street1"=>"", "street2"=>"", "phone"=>"", "first_name"=>"Test", "last_name"=>"User", "state"=>"", "email"=>"test@example.com"}, "commit"=>"Create", "action"=>"create", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "controller"=>"users"}
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'test@example.com') LIMIT 1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '01855bad39eb2e58c8c0084703a8175c96f5d210a75b1015fe38e250ac57e3949647f3dc495eb301b6fd65e39f9d20583595f31a79adbd698a5a8eead9731c46') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 26ms (View: 11, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-01-20 10:49:37) [POST]
+  Parameters: {"user"=>{"city"=>"", "zip"=>"", "street1"=>"", "street2"=>"", "phone"=>"", "first_name"=>"Test", "last_name"=>"User", "state"=>"", "email"=>"test@example.com"}, "commit"=>"Create", "action"=>"create", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "controller"=>"users"}
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'test@example.com') LIMIT 1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '58018c1ab48a79cb95d039d0b3a92d55d4c63388fb6472daac0b5a82b5cb492c657da74d747f4750025d768523b05f5ec6e990c36619b9ef7453d8492663eeee') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 25ms (View: 11, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-01-20 10:49:51) [POST]
+  Parameters: {"user"=>{"city"=>"", "zip"=>"", "street1"=>"", "password_confirmation"=>"[FILTERED]", "street2"=>"", "phone"=>"", "first_name"=>"Test", "password"=>"[FILTERED]", "last_name"=>"User", "state"=>"", "email"=>"test@example.com"}, "commit"=>"Create", "action"=>"create", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "controller"=>"users"}
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'test@example.com') LIMIT 1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '5171741d67b7f02409f2b47c1c9e7c0bafe6cd33fff86d67368a4bf144d75fa021b0ec47b12ec88757e10d77676bca2bff50063c2d31911aa0e63514648f14e9') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO "users" ("city", "zip", "updated_at", "crypted_password", "street1", "street2", "password_salt", "phone", "persistence_token", "first_name", "last_name", "email", "state", "created_at") VALUES('', '', '2009-01-20 15:49:51', 'dffa76c653bbc7a6b8e491ec11cb8a96bfa7ecf54d2991ef961ef3564677ebe972af2382846ad795268dfc178a07fe3f8cc11e95fa0c20f5aa14293a7d2b22ed', '', '', 'fc410059e4d8e73d662b050f0a60c9b2fa048ee6d917a8a620639a0d58af03039590c972cffd03a664e60cba62e0722b3292cd6939c164d93fdb69e834ce0cd4', '', '5171741d67b7f02409f2b47c1c9e7c0bafe6cd33fff86d67368a4bf144d75fa021b0ec47b12ec88757e10d77676bca2bff50063c2d31911aa0e63514648f14e9', 'Test', 'User', 'test@example.com', '', '2009-01-20 15:49:51')[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE "users" SET "created_at" = '2009-01-20 15:49:51', "persistence_token" = '5171741d67b7f02409f2b47c1c9e7c0bafe6cd33fff86d67368a4bf144d75fa021b0ec47b12ec88757e10d77676bca2bff50063c2d31911aa0e63514648f14e9', "phone" = '', "email" = 'test@example.com', "street2" = '', "zip" = '', "city" = '', "street1" = '', "state" = '', "crypted_password" = 'dffa76c653bbc7a6b8e491ec11cb8a96bfa7ecf54d2991ef961ef3564677ebe972af2382846ad795268dfc178a07fe3f8cc11e95fa0c20f5aa14293a7d2b22ed', "last_name" = 'User', "updated_at" = '2009-01-20 15:49:51', "first_name" = 'Test', "password_salt" = 'fc410059e4d8e73d662b050f0a60c9b2fa048ee6d917a8a620639a0d58af03039590c972cffd03a664e60cba62e0722b3292cd6939c164d93fdb69e834ce0cd4' WHERE "id" = 2[0m
+Cookie set: user_credentials=5171741d67b7f02409f2b47c1c9e7c0bafe6cd33fff86d67368a4bf144d75fa021b0ec47b12ec88757e10d77676bca2bff50063c2d31911aa0e63514648f14e9; path=/
+Redirected to #<User:0x2007844>
+Completed in 23ms (DB: 1) | 302 Found [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-01-20 10:49:52) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"users"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 19ms (View: 6, DB: 1) | 200 OK [http://localhost/users/2]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-20 10:50:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 20ms (View: 7, DB: 1) | 200 OK [http://localhost/users]

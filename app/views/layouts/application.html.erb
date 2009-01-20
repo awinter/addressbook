@@ -10,7 +10,7 @@
 <body>
 
 <p style="color: green"><%= flash[:notice] %></p>
-<% if current_user %>
+<% if current_user_session %>
 	<%= link_to "Logout", user_session_path, :method => :delete %>
 <% end %>
 <%= yield  %>
