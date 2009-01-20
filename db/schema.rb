@@ -9,7 +9,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090120171958) do
+ActiveRecord::Schema.define(:version => 20090120183916) do
+
+  create_table "addresses", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "street1"
+    t.string   "street2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.float    "longitude"
+    t.float    "latitude"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "friendships", :force => true do |t|
     t.integer "user_id"
@@ -20,11 +33,6 @@ ActiveRecord::Schema.define(:version => 20090120171958) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
-    t.string   "street1"
-    t.string   "street2"
-    t.string   "city"
-    t.string   "state"
-    t.string   "zip"
     t.string   "phone"
     t.datetime "created_at"
     t.datetime "updated_at"

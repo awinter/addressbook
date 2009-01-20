@@ -17,7 +17,8 @@ class UsersController < ApplicationController
   # GET /users/1.xml
   def show
     @user = User.find(params[:id])
-
+    @address = @user.address || Address.new
+    
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @user }
@@ -28,6 +29,7 @@ class UsersController < ApplicationController
   # GET /users/new.xml
   def new
     @user = User.new
+    @address = @user.build_address
 
     respond_to do |format|
       format.html # new.html.erb
@@ -38,12 +40,14 @@ class UsersController < ApplicationController
   # GET /users/1/edit
   def edit
     @user = User.find(params[:id])
+    @address = @user.address || @user.build_address
   end
 
   # POST /users
   # POST /users.xml
   def create
     @user = User.new(params[:user])
+    @user.build_address(params[:address])
 
     respond_to do |format|
       if @user.save
@@ -61,9 +65,10 @@ class UsersController < ApplicationController
   # PUT /users/1.xml
   def update
     @user = User.find(params[:id])
+    @address = @user.address || @user.build_address
 
     respond_to do |format|
-      if @user.update_attributes(params[:user])
+      if @user.update_attributes(params[:user]) && @address.update_attributes(params[:address])
         flash[:notice] = 'User was successfully updated.'
         format.html { redirect_to(@user) }
         format.xml  { head :ok }

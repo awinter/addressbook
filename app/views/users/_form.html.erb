@@ -21,26 +21,28 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation %>
   </p>
-  <p>
-    <%= f.label :street1 %><br />
-    <%= f.text_field :street1 %>
-  </p>
-  <p>
-    <%= f.label :street2 %><br />
-    <%= f.text_field :street2 %>
-  </p>
-  <p>
-    <%= f.label :city %><br />
-    <%= f.text_field :city %>
-  </p>
-  <p>
-    <%= f.label :state %><br />
-    <%= f.text_field :state %>
-  </p>
-  <p>
-    <%= f.label :zip %><br />
-    <%= f.text_field :zip %>
-  </p>
+  <% fields_for @address do |ff| %>
+	  <p>
+	    <%= ff.label :street1 %><br />
+	    <%= ff.text_field :street1 %>
+	  </p>
+	  <p>
+	    <%= ff.label :street2 %><br />
+	    <%= ff.text_field :street2 %>
+	  </p>
+	  <p>
+	    <%= ff.label :city %><br />
+	    <%= ff.text_field :city %>
+	  </p>
+	  <p>
+	    <%= ff.label :state %><br />
+	    <%= ff.text_field :state %>
+	  </p>
+	  <p>
+	    <%= ff.label :zip %><br />
+	    <%= ff.text_field :zip %>
+	  </p>
+  <% end %>
   <p>
     <%= f.label :phone %><br />
     <%= f.text_field :phone %>

@@ -18,11 +18,11 @@
     <td><%=h user.first_name %></td>
     <td><%=h user.last_name %></td>
     <td><%=h user.email %></td>
-    <td><%=h user.street1 %></td>
-    <td><%=h user.street2 %></td>
-    <td><%=h user.city %></td>
-    <td><%=h user.state %></td>
-    <td><%=h user.zip %></td>
+    <td><%=h user.address && user.address.street1 %></td>
+    <td><%=h user.address && user.address.street2 %></td>
+    <td><%=h user.address && user.address.city %></td>
+    <td><%=h user.address && user.address.state %></td>
+    <td><%=h user.address && user.address.zip %></td>
     <td><%=h user.phone %></td>
     <td><%= link_to 'Show', user %></td>
 	<% if (current_user.admin? || current_user == user) %>
