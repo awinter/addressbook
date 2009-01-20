@@ -5,4 +5,9 @@ class User < ActiveRecord::Base
   
   has_one :address
   
+  def geo_coords
+    if address && address.longitude && address.latitude
+      [address.latitude, address.longitude]
+    end
+  end
 end

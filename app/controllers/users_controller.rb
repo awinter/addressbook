@@ -6,7 +6,19 @@ class UsersController < ApplicationController
   # GET /users.xml
   def index
     @users = User.find(:all)
-
+    
+    @map = GMap.new("map_div")
+    @map.control_init(:large_map => true,:map_type => true)
+    if current_user.geo_coords
+      @map.center_zoom_init(current_user.geo_coords,4)
+    else
+      @map.center_zoom_init([75.6,-42.467],4)
+    end
+    
+    # for user in @users
+    #   GMarker.new(user.geo_coords) if user.geo_coords
+    @map.overlay_init(GMarker.new([75.6,-42.467],:title => "Hello", :info_window => "Info! Info!"))
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @users }
