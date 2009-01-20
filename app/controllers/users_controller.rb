@@ -5,7 +5,11 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.xml
   def index
-    @users = User.find(:all)
+    if params[:friends_only] 
+      @users = current_user.friends
+    else
+      @users = User.find(:all)
+    end
     
     @map = GMap.new("map_div")
     @map.control_init(:large_map => true,:map_type => true)
@@ -15,9 +19,9 @@ class UsersController < ApplicationController
       @map.center_zoom_init([75.6,-42.467],4)
     end
     
-    # for user in @users
-    #   GMarker.new(user.geo_coords) if user.geo_coords
-    @map.overlay_init(GMarker.new([75.6,-42.467],:title => "Hello", :info_window => "Info! Info!"))
+    for user in @users
+      @map.overlay_init(GMarker.new(user.geo_coords, :title => "#{user.first_name} #{user.last_name}", :info_window => "<b>#{user.first_name} #{user.last_name}<br/>#{user.phone}<br/>#{user.email}</b>")) if user.geo_coords
+    end
     
     respond_to do |format|
       format.html # index.html.erb

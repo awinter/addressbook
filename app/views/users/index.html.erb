@@ -1,4 +1,8 @@
-<h1>Where is Everyone?</h1>
+<% if params[:friends_only] %>
+	<h1><%= link_to "Where is Everyone?", users_path(:friends_only => false) %>&nbsp;Where are my Friends?</h1>
+<% else %>
+	<h1>Where is Everyone?&nbsp;<%= link_to "Where are my Friends?", users_path(:friends_only => true) %></h1>
+<% end %>
 
 <%= @map.div(:width => 600, :height => 400) %>
 
