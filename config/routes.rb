@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :users do |users|
+  map.resources :users, :member => {:update_friends => :put} do |users|
     users.resources :friendships
   end
 

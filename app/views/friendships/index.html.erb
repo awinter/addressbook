@@ -1,41 +1,46 @@
 <h1>Friends of <%= @user.first_name %></h1>
 
-<table>
-  <tr>
-    <th>Friend?</th>
-    <th>First name</th>
-    <th>Last name</th>
-    <th>Email</th>
-    <th>Street1</th>
-    <th>Street2</th>
-    <th>City</th>
-    <th>State</th>
-    <th>Zip</th>
-    <th>Phone</th>
-  </tr>
+<% form_tag update_friends_user_path(@user), :method => :put do %>
+	<%= hidden_field_tag "user[friend_ids][]", "" %>
+	<table>
+	  <tr>
+	    <th>Friend?</th>
+	    <th>First name</th>
+	    <th>Last name</th>
+	    <th>Email</th>
+	    <th>Street1</th>
+	    <th>Street2</th>
+	    <th>City</th>
+	    <th>State</th>
+	    <th>Zip</th>
+	    <th>Phone</th>
+	  </tr>
 
-<% for user in @users %>
-  <tr>
-    <td><%= check_box_tag "friend_ids[]", user.id, @user.friends.include?(user) %></td>
-    <td><%=h user.first_name %></td>
-    <td><%=h user.last_name %></td>
-    <td><%=h user.email %></td>
-    <td><%=h user.street1 %></td>
-    <td><%=h user.street2 %></td>
-    <td><%=h user.city %></td>
-    <td><%=h user.state %></td>
-    <td><%=h user.zip %></td>
-    <td><%=h user.phone %></td>
-    <td><%= link_to 'Show', user %></td>
-	<% if (current_user.admin? || current_user == user) %>
-    	<td><%= link_to 'Edit', edit_user_path(user) %></td>
-    	<td><%= link_to 'Delete', user, :confirm => 'Are you sure?', :method => :delete %></td>
-    	<td><%= link_to 'Select Friends', user_friendships_path(user) %></td>
+	<% for user in @users %>
+	  <tr>
+	    <td><%= check_box_tag "user[friend_ids][]", user.id, @user.friends.include?(user) %></td>
+	    <td><%=h user.first_name %></td>
+	    <td><%=h user.last_name %></td>
+	    <td><%=h user.email %></td>
+	    <td><%=h user.street1 %></td>
+	    <td><%=h user.street2 %></td>
+	    <td><%=h user.city %></td>
+	    <td><%=h user.state %></td>
+	    <td><%=h user.zip %></td>
+	    <td><%=h user.phone %></td>
+	    <td><%= link_to 'Show', user %></td>
+		<% if (current_user.admin? || current_user == user) %>
+	    	<td><%= link_to 'Edit', edit_user_path(user) %></td>
+	    	<td><%= link_to 'Delete', user, :confirm => 'Are you sure?', :method => :delete %></td>
+	    	<td><%= link_to 'Select Friends', user_friendships_path(user) %></td>
+		<% end %>
+	  </tr>
 	<% end %>
-  </tr>
-<% end %>
-</table>
+	</table>
 
+	<%= submit_tag "Save" %>
+
+<% end %>
 <br />
 
 <%= link_to 'New user', new_user_path %>
