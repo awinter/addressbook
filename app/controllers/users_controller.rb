@@ -20,7 +20,7 @@ class UsersController < ApplicationController
     end
     
     for user in @users
-      @map.overlay_init(GMarker.new(user.geo_coords, :title => "#{user.first_name} #{user.last_name}", :info_window => "<b>#{user.first_name} #{user.last_name}<br/>#{user.phone}<br/>#{user.email}</b>")) if user.geo_coords
+      @map.overlay_init(GMarker.new(user.geo_coords, :title => "#{user.first_name} #{user.last_name}", :info_window => render_to_string(:partial => 'info_window', :locals => {:user => user}))) if user.geo_coords
     end
     
     respond_to do |format|

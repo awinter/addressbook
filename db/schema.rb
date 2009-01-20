@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090120203435) do
+ActiveRecord::Schema.define(:version => 20090120205930) do
 
   create_table "address_changes", :force => true do |t|
     t.integer  "address_id"
@@ -46,6 +46,10 @@ ActiveRecord::Schema.define(:version => 20090120203435) do
     t.string   "password_salt"
     t.string   "persistence_token"
     t.boolean  "admin"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
 end

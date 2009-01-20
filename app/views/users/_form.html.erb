@@ -1,4 +1,4 @@
-<% form_for(@user) do |f| %>
+<% form_for(@user, :html => {:multipart => true}) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -46,6 +46,10 @@
   <p>
     <%= f.label :phone %><br />
     <%= f.text_field :phone %>
+  </p>
+  <p>
+    <%= f.label :photo %><br />
+    <%= f.file_field :photo %>
   </p>
   <% if (current_user && current_user.admin?) %>
     <p>
