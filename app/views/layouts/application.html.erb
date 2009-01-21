@@ -4,10 +4,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title><%= controller.action_name %></title>
+  <title>Address Book with Google Maps</title>
   <%= stylesheet_link_tag 'scaffold' %>
+
+  <%# Google Maps integration %>
   <%= GMap.header %>
   <%= @map && @map.to_html %>
+
+  <%# RSS feed integration %>
   <link href="/feed.rss" rel="alternate" type="application/rss+xml" title="Address Change Notification System" />
 </head>
 <body>
@@ -16,6 +20,7 @@
 <% if current_user_session %>
 	<%= link_to "Logout", user_session_path, :method => :delete %>
 <% end %>
+
 <%= yield  %>
 
 </body>

@@ -1,3 +1,4 @@
+<%# Provide a simple alternation between displaying everyone or just close friends %>
 <% if params[:friends_only] %>
 	<h1><%= link_to "Where is Everyone?", users_path(:friends_only => false) %>&nbsp;Where are my Friends?</h1>
 <% else %>

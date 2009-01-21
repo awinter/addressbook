@@ -1,6 +1,6 @@
 # Rakefile.rb - for Harvard CSCI E-168, Fall 2008
-# Assignment 3, Milestone III
-# MetricsMine
+# Final Project
+# Address Book
 #
 # To see a list of tasks, type
 #
@@ -34,8 +34,8 @@ test_dir         = 'test/'
 tmp_dir          = 'tmp/'
 
 # And a few constants we will use for the name of the ZIP
-PROJECT_HUMAN    = 'Assigment 3 (MetricsMine, Milestone 3), Harvard CSCI E-168, Fall 2008'
-PROJECT          = 'e168-assignment3-milestone-3'
+PROJECT_HUMAN    = 'Final Project, Harvard CSCI E-168, Fall 2008'
+PROJECT          = 'e168-finalproject'
 PROJECT_VERSION  = '3.0.000'
 USER             = (ENV['USER'] || ENV['USERNAME'] || 'Unknown').gsub(/\W+/,'')
 

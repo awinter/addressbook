@@ -1,6 +1,8 @@
+<%# We can safely assume friends are on a first name basis here %>
 <h1>Friends of <%= @user.first_name %></h1>
 
 <% form_tag update_friends_user_path(@user), :method => :put do %>
+	<%# Oh oh, un-checking a checkbox isn't handled gracefully, submitting the array of current values to help %>
 	<%= hidden_field_tag "user[friend_ids][]", "" %>
 	<table>
 		<% if @users.size == 0 %>
@@ -29,4 +31,3 @@
 	
 
 <% end %>
-<br />

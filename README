@@ -1,256 +1,142 @@
-== Welcome to Rails
-
-Rails is a web-application framework that includes everything needed to create 
-database-backed web applications according to the Model-View-Control pattern. 
-
-This pattern splits the view (also called the presentation) into "dumb" templates
-that are primarily responsible for inserting pre-built data in between HTML tags.
-The model contains the "smart" domain objects (such as Account, Product, Person,
-Post) that holds all the business logic and knows how to persist themselves to
-a database. The controller handles the incoming requests (such as Save New Account,
-Update Product, Show Post) by manipulating the model and directing data to the view.
-
-In Rails, the model is handled by what's called an object-relational mapping
-layer entitled Active Record. This layer allows you to present the data from
-database rows as objects and embellish these data objects with business logic
-methods. You can read more about Active Record in
-link:files/vendor/rails/activerecord/README.html.
-
-The controller and view are handled by the Action Pack, which handles both
-layers by its two parts: Action View and Action Controller. These two layers
-are bundled in a single package due to their heavy interdependence. This is
-unlike the relationship between the Active Record and Action Pack that is much
-more separate. Each of these packages can be used independently outside of
-Rails.  You can read more about Action Pack in
-link:files/vendor/rails/actionpack/README.html.
-
-
-== Getting Started
-
-1. At the command prompt, start a new Rails application using the <tt>rails</tt> command
-   and your application name. Ex: rails myapp
-2. Change directory into myapp and start the web server: <tt>script/server</tt> (run with --help for options)
-3. Go to http://localhost:3000/ and get "Welcome aboard: You're riding the Rails!"
-4. Follow the guidelines to start developing your application
-
-
-== Web Servers
-
-By default, Rails will try to use Mongrel and lighttpd if they are installed, otherwise
-Rails will use WEBrick, the webserver that ships with Ruby. When you run script/server,
-Rails will check if Mongrel exists, then lighttpd and finally fall back to WEBrick. This ensures
-that you can always get up and running quickly.
+*******************************************************************&******
+***                                                                    ***
+***  FOR THE OFFICIAL PROJECT DESCRIPTION, PLEASE SEE                  ***
+***  http://e168f08.plugh.org/assignments/assignment-3-milestone-iii/  ***
+***                                                                    ***
+**************************************************************************
 
-Mongrel is a Ruby-based webserver with a C component (which requires compilation) that is
-suitable for development and deployment of Rails applications. If you have Ruby Gems installed,
-getting up and running with mongrel is as easy as: <tt>gem install mongrel</tt>.
-More info at: http://mongrel.rubyforge.org
+Harvard CSCI E-168, Fall 2008
+Project: Final Project, Address Book
+By: Adam Winter
+email: awinter@fas.harvard.edu
 
-If Mongrel is not installed, Rails will look for lighttpd. It's considerably faster than
-Mongrel and WEBrick and also suited for production use, but requires additional
-installation and currently only works well on OS X/Unix (Windows users are encouraged
-to start with Mongrel). We recommend version 1.4.11 and higher. You can download it from
-http://www.lighttpd.net.
+Due date: Wednesday, January 21
 
-And finally, if neither Mongrel or lighttpd are installed, Rails will use the built-in Ruby
-web server, WEBrick. WEBrick is a small Ruby web server suitable for development, but not
-for production.
-
-But of course its also possible to run Rails on any platform that supports FCGI.
-Apache, LiteSpeed, IIS are just a few. For more information on FCGI,
-please visit: http://wiki.rubyonrails.com/rails/pages/FastCGI
 
+In Assignment 3, you will modify MetricMine, adding controllers and views.
 
-== Apache .htaccess example
+There are some small changes between this version and the prior version: 20081111021247_add_current_observation_set_id_to_user.rb adds a column to user "current_observation_set_id" - whenever you view an observation set, the id is saved here so that when you log in from a cookie, you can be redirected to that set: This makes it especially easy to enter a new observation for whatever set you were last looking at. There are also some extra validations on the models; these changes required some tweaks to the tests (we didn't add tests for the additional validations, but we did need to change our existing tests). We added a default value of '' for the notes field on observations. We also added a "dependent" option for ObservationKind so that when it is deleted, the foreign key will be set to null on any ObservationSets that belong to it. Finally, there is an additional data migration so that the "john" user has two relatively detailed observation sets (for weight and savings).
 
-# General Apache options
-AddHandler fastcgi-script .fcgi
-AddHandler cgi-script .cgi
-Options +FollowSymLinks +ExecCGI
 
-# If you don't want Rails to look in certain directories,
-# use the following rewrite rules so that Apache won't rewrite certain requests
-# 
-# Example:
-#   RewriteCond %{REQUEST_URI} ^/notrails.*
-#   RewriteRule .* - [L]
+About nomenclature:
 
-# Redirect all requests not available on the filesystem to Rails
-# By default the cgi dispatcher is used which is very slow
-# 
-# For better performance replace the dispatcher with the fastcgi one
-#
-# Example:
-#   RewriteRule ^(.*)$ dispatch.fcgi [QSA,L]
-RewriteEngine On
+In the UI, an observation set is called a metric, and an observation kind is called a "kind of metric" or a "metric kind." It seemed to us that for the end user this language is easier that observation/observation set.
 
-# If your Rails application is accessed via an Alias directive,
-# then you MUST also set the RewriteBase in this htaccess file.
-#
-# Example:
-#   Alias /myrailsapp /path/to/myrailsapp/public
-#   RewriteBase /myrailsapp
 
-RewriteRule ^$ index.html [QSA]
-RewriteRule ^([^.]+)$ $1.html [QSA]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ dispatch.cgi [QSA,L]
+Now, what are you supposed to do?
 
-# In case Rails experiences terminal errors
-# Instead of displaying this message you can supply a file here which will be rendered instead
-# 
-# Example:
-#   ErrorDocument 500 /500.html
+You need to flesh out the controllers and views that manage certain models for basic CRUD operations.
 
-ErrorDocument 500 "<h2>Application error</h2>Rails application failed to start properly"
+Any time you like, you may play with a "reference implementation" here:
 
+  http://metricsmine.plugh.org/
 
-== Debugging Rails
+We will re-run the migrations periodically to clear out the database.
 
-Sometimes your application goes wrong.  Fortunately there are a lot of tools that
-will help you debug it and get it back on the rails.
+Also note that you can fire up your server (ruby script/server), browse to http://localhost:3000, and quite a bit of MetricsMine will run. You will see some missing data because your controllers aren't finished, or some static data that doesn't apply to your user, because the views aren't all dynamic. In a number of cases, we have marked out views that need to be made dynamic; in some cases, we give you some static rendered HTML that is the result of the reference view code. All of this is to alert you to what must be done.
 
-First area to check is the application log files.  Have "tail -f" commands running
-on the server.log and development.log. Rails will automatically display debugging
-and runtime information to these files. Debugging info will also be shown in the
-browser on requests from 127.0.0.1.
+Regarding the static HTML: Remember that almost all of this is generated dynamically! E.g., if the action on a form is to "/observation_sets/create_observation" that is probably generated with something like this:
 
-You can also log your own messages directly into the log file from your code using
-the Ruby logger class from inside your controllers. Example:
+<% form_for :observation, :url => { :action => :create_observation } do |form| %>
 
-  class WeblogController < ActionController::Base
-    def destroy
-      @weblog = Weblog.find(params[:id])
-      @weblog.destroy
-      logger.info("#{Time.now} Destroyed Weblog ID ##{@weblog.id}!")
-    end
-  end
+In other words, USE YOUR VIEW HELPERS! We don't want to see "raw" HTML links, form actions, etc., etc. Such things will count against you.
 
-The result will be a message in your log file along the lines of:
+For controllers, make sure that you choose redirect or render properly; we will mention this occasionally below, but the behavior should be like the reference MetricsMine application. When this assignment is graded, we will spot-check for this. In the views, there are a number of little details you need to get right: The page title; the error display (both summary and per-fiend); setting the focus on the first element for a field; etc. Again, graders will spot-check, so you need to get this right everywhere.
 
-  Mon Oct 08 14:22:29 +1000 2007 Destroyed Weblog ID #1
+NOTE: On occasion, you may see an error message claiming that there is no template for the "create" (or another) action. Remember that in Rails, we typically redirect after create, or use the view template for another action; in other words, these error messages may be spurious, depending on where you are with the assignment. When in doubt, review the reference implementation.
+ 
+This download includes a fully-migrated version of the database. If you want to get the database back to its original condition, do
 
-More information on how to use the logger is at http://www.ruby-doc.org/core/
+  rake db:migrate VERSION=02
+  rake db:migrate
 
-Also, Ruby documentation can be found at http://www.ruby-lang.org/ including:
+During development, you may also find that you need to delete any permanent cookies in your browser for the app associated with the "localhost" server. You would want to do this if the saved user id is forcing you to an action + view you haven't implemented yet.
 
-* The Learning Ruby (Pickaxe) Book: http://www.ruby-doc.org/docs/ProgrammingRuby/
-* Learn to Program: http://pine.fm/LearnToProgram/  (a beginners guide)
 
-These two online (and free) books will bring you up to speed on the Ruby language
-and also on programming in general.
+Let's go through the actions, roughly by controller:
 
 
-== Debugger
+(1) The easy cases: Administrative functions. Remember that you have to log in as "admin" to see these. You should be able to finish these swiftly; within 4 hours, maximum.
 
-Debugger support is available through the debugger command when you start your Mongrel or
-Webrick server with --debugger. This means that you can break out of execution at any point
-in the code, investigate and change the model, AND then resume execution! 
-You need to install ruby-debug to run the server in debugging mode. With gems, use 'gem install ruby-debug'
-Example:
+Controllers:
 
-  class WeblogController < ActionController::Base
-    def index
-      @posts = Post.find(:all)
-      debugger
-    end
-  end
+MeasurementsController
+ObservationKindsController
+UnitsController
 
-So the controller will accept the action, run the first line, then present you
-with a IRB prompt in the server window. Here you can do things like:
+These are roughly the same as the CRUD operations in LinkWizz, CCC, and LinkWizz's ResearchTopicsController. Remember that a Unit belongs to a Measurement (same for ObservationKind), so for edit and new you will need to set up a @measurements instance variable that holds the options for the drop-down.
 
-  >> @posts.inspect
-  => "[#<Post:0x14a6be8 @attributes={\"title\"=>nil, \"body\"=>nil, \"id\"=>\"1\"}>,
-       #<Post:0x14a6620 @attributes={\"title\"=>\"Rails you know!\", \"body\"=>\"Only ten..\", \"id\"=>\"2\"}>]"
-  >> @posts.first.title = "hello from a debugger"
-  => "hello from a debugger"
+Notice that you CAN delete an ObservationKind.
 
-...and even better is that you can examine how your runtime objects actually work:
+Views: 
 
-  >> f = @posts.first
-  => #<Post:0x13630c4 @attributes={"title"=>nil, "body"=>nil, "id"=>"1"}>
-  >> f.
-  Display all 152 possibilities? (y or n)
+For each of these controllers, there are views for edit, index, and new - there is no "show" because the relevant data is shown in the list. A pattern you may see is to implement a "list" action, and have the "index" action utilize it; in MetricsMine we've simply implemented index.
 
-Finally, when you're ready to resume execution, you enter "cont"
+We have included STATIC stubs for the views for ObservationKinds to give you a feel for what the rendered dynamic view should look like (you can do "view source" on the reference implementation to see the same sort of thing). Notice the fancy JavaScript for the "(delete)" link. The view helper link_to's :action => 'destroy' option will do all of this for you.
 
+For the others, we have just included a message asking you to implement the view.
 
-== Console
 
-You can interact with the domain model by starting the console through <tt>script/console</tt>.
-Here you'll have all parts of the application configured, just like it is when the
-application is running. You can inspect domain models, change values, and save to the
-database. Starting the script without arguments will launch it in the development environment.
-Passing an argument will specify a different environment, like <tt>script/console production</tt>.
 
-To reload your controllers and models after launching the console run <tt>reload!</tt>
 
-== dbconsole
+(2) Managing an Observation Set and its Observations
 
-You can go to the command line of your database directly through <tt>script/dbconsole</tt>.
-You would be connected to the database with the credentials defined in database.yml.
-Starting the script without arguments will connect you to the development database. Passing an
-argument will connect you to a different database, like <tt>script/dbconsole production</tt>.
-Currently works for mysql, postgresql and sqlite.
+This will be more difficult. There are a lot of little details here. Try to get as far as you can; we will give you hints on the discussion board, particularly if it is clear that you are making headway.
 
-== Description of Contents
+Controller: ObservationSetsController
 
-app
-  Holds all the code that's specific to this particular application.
+Notice that this controller manages updates of BOTH ObservationSet and Observation. This is not an unusual pattern. Since Observation is almost completely a "slave" of ObservationSet, it is convenient to manage both Models in the same controller. When we get to REST, we will talk about changing this.
 
-app/controllers
-  Holds controllers that should be named like weblogs_controller.rb for
-  automated URL mapping. All controllers should descend from ApplicationController
-  which itself descends from ActionController::Base.
+Actions
 
-app/models
-  Holds models that should be named like post.rb.
-  Most models will descend from ActiveRecord::Base.
+new and create: The new and create paired actions are for creating a new ObservationSet. Notice that you cannot edit/update the name and kind of a user's ObservationSet!
 
-app/views
-  Holds the template files for the view that should be named like
-  weblogs/index.html.erb for the WeblogsController#index action. All views use eRuby
-  syntax.
+NOTE: When an ObservationSet is created, don't forget to (a) set the @observation_set's user_id to that of the current user, and (b) also set the @observation_set's preferred unit to the first unit of the selected ObservationKind's Measurement!! These two items (a) and (b) are each easily expressed in a single statement.
 
-app/views/layouts
-  Holds the template files for layouts to be used with views. This models the common
-  header/footer method of wrapping views. In your views, define a layout using the
-  <tt>layout :default</tt> and create a file named default.html.erb. Inside default.html.erb,
-  call <% yield %> to render the view using this layout.
+show: This shows all of the observations for the observation set, AND it sets up a form for adding a single observation! When an observation set is displayed or edited, the current observation set id is copied to the current user's attribute current_observation_set_id. You must do this as well. This allows the filter on the application controller to bring the user back to the last observation set edited, for easy addition of new data.
 
-app/helpers
-  Holds view helpers that should be named like weblogs_helper.rb. These are generated
-  for you automatically when using script/generate for controllers. Helpers can be used to
-  wrap functionality for your views into methods.
+create_observation: This is the action to which "show" posts when you want to create a single observation. Let me repeat: *NEW* sets up the form for an observation_set that posts back to *CREATE* to create an observation_set. But *SHOW* shows all the observations, AND sets up a form for an observation; that form posts back to *CREATE_OBSERVATION*. In the reference implementation, the id of the newly-created observation is put into the flash, so that when the list of observations is re-displayed, we can change the background color of the row. You need to do this, too; to get it to happen you will want to dynamically change the style element on the correct <tr> tag. E.g., it would look like:
 
-config
-  Configuration files for the Rails environment, the routing map, the database, and other dependencies.
+  <tr>
+  
+when the row shouldn't be emphasized; and
 
-db
-  Contains the database schema in schema.rb.  db/migrate contains all
-  the sequence of Migrations for your schema.
+  <tr style="background-color: #E0FFFF">
 
-doc
-  This directory is where your application documentation will be stored when generated
-  using <tt>rake doc:app</tt>
+when it should be emphasized. This is the sort of thing you can glean from view/source for the reference implementation.
 
-lib
-  Application specific libraries. Basically, any kind of custom code that doesn't
-  belong under controllers, models, or helpers. This directory is in the load path.
+edit and update: These are for setting up the edit view with the checkboxes, so that you can delete specific observations. Notice that after update deletes the appropriate observations, it creates a "flash" message that summarizes how many observations were deleted. Notice that the title of this page has the name for the observation set, so you will need to establish the proper @observation_set as well as @observations. It is possible to implement this so that the view works off of @observation_set only, but I think it will be easier if populate instance variables for both @observation_set and @observations.
 
-public
-  The directory available for the web server. Contains subdirectories for images, stylesheets,
-  and javascripts. Also contains the dispatchers and the default HTML files. This should be
-  set as the DOCUMENT_ROOT of your web server.
+Views: 
 
-script
-  Helper scripts for automation and generation.
+edit.html.erb - There should be a table around the form; checkboxes are on each row. (Big) HINT: The easiest way to make this work is for the form to be on the observation_set, and to use the checkbox_tag: check_box_tag "observation_ids[]", "#{obs.id}" %>
 
-test
-  Unit and functional tests along with fixtures. When using the script/generate scripts, template
-  test files will be generated for you and placed in this directory.
+new.html.erb - Standard.
 
-vendor
-  External libraries that the application depends on. Also includes the plugins subdirectory.
-  If the app has frozen rails, those gems also go here, under vendor/rails/.
-  This directory is in the load path.
+show.html.erb - The interesting part is defining the form to create an observation. It will look like this:
+
+  <% form_for :observation, :url => { :action => :create_observation } do |form| %>
+
+Now, read closely: An observation is for a particular observation_set, right? Therefore, this form must have in it a field that designates the observation_set for which this observation is destined. We are accustomed to putting all of the new data for a model into form fields -- but do we want the user to be able to edit the observation_set_id? I don't think so. Therefore, the way to implement this is with a hidden field. Inside that form you are going to need to define:
+
+  <%= form.hidden_field :observation_set_id %>
+
+Otherwise, how would the observation_set_id get back into the params hash so that the new @observation is set up correctly . . . ?
+
+That's all we have to say for show.html.erb. Try and get as much of it working as you can; if you have issues, post them to the discussion board.
+
+
+QUESTIONS AND ANSWERS
+
+Q1. Can I replace the stylesheet or change the HTML?
+
+A1. No.
+
+Q2: Can I add additional information that is "latent" in the model? I.e., can I change what is shown in the tables?
+
+A2: No.
+
+Q3: Is there any extra credit?
+
+A3: Yes. We will give a SMALL number of points (2 or 3) for an implementation of the "compare" function. Compare is a multi-stage process. First a list of links should be displayed where the user picks an observation set (you could also implement this on the index view for observation_sets), so that the user can pick which observation set needs a comparison. That should take the user to a page that would show a list of observation sets owned by other users of the same measurement kind. The UI could present a list of links or a drop-down. Once the other observation set is picked, you should show a view that compares the data. My advice is to KEEP IT SIMPLE. For example, simplying show the first and last observations for each observation set, along with the dates for those observations, would be fine. The learning process here is in the addition of controllers and views to facilitate the comparison. If you want to go nuts, you could try to rollup the data in similar fashion, and then create a Google Chart that charts both data sets -- to do this will require a lot of scrounging around to figure out Google Charts. I think this would be a waste of time at this point, but I mention it for the ambitious.
+
