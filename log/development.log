@@ -6461,3 +6461,1210 @@ Rendered users/_info_window (0.6ms)
 Rendering template within layouts/application
 Rendering users/index
 Completed in 39ms (View: 7, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing FeedsController#index to rss (for 127.0.0.1 at 2009-01-20 17:10:19) [GET]
+  Parameters: {"format"=>"rss", "action"=>"index", "controller"=>"feeds"}
+  [4;36;1mAddressChange Load (1.0ms)[0m   [0;1mSELECT * FROM "address_changes" ORDER BY created_at desc LIMIT 50[0m
+Rendering feeds/index
+  [4;35;1mAddress Load (0.3ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 30ms (View: 23, DB: 2) | 200 OK [http://localhost/feed.rss]
+
+
+Processing FeedsController#index to rss (for 127.0.0.1 at 2009-01-20 17:40:34) [GET]
+  Parameters: {"format"=>"rss", "action"=>"index", "controller"=>"feeds"}
+  [4;35;1mAddressChange Load (1.2ms)[0m   [0mSELECT * FROM "address_changes" ORDER BY created_at desc LIMIT 50[0m
+Rendering feeds/index
+  [4;36;1mAddress Load (0.5ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 57ms (View: 47, DB: 2) | 200 OK [http://localhost/feed.rss]
+
+
+Processing FeedsController#index to rss (for 127.0.0.1 at 2009-01-20 18:10:37) [GET]
+  Parameters: {"format"=>"rss", "action"=>"index", "controller"=>"feeds"}
+  [4;36;1mAddressChange Load (1.0ms)[0m   [0;1mSELECT * FROM "address_changes" ORDER BY created_at desc LIMIT 50[0m
+Rendering feeds/index
+  [4;35;1mAddress Load (0.5ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 40ms (View: 32, DB: 3) | 200 OK [http://localhost/feed.rss]
+
+
+Processing FeedsController#index to rss (for 127.0.0.1 at 2009-01-20 18:40:37) [GET]
+  Parameters: {"format"=>"rss", "action"=>"index", "controller"=>"feeds"}
+  [4;35;1mAddressChange Load (0.9ms)[0m   [0mSELECT * FROM "address_changes" ORDER BY created_at desc LIMIT 50[0m
+Rendering feeds/index
+  [4;36;1mAddress Load (0.3ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 31ms (View: 24, DB: 2) | 200 OK [http://localhost/feed.rss]
+
+
+Processing FeedsController#index to rss (for 127.0.0.1 at 2009-01-20 19:10:40) [GET]
+  Parameters: {"format"=>"rss", "action"=>"index", "controller"=>"feeds"}
+  [4;36;1mAddressChange Load (2.3ms)[0m   [0;1mSELECT * FROM "address_changes" ORDER BY created_at desc LIMIT 50[0m
+Rendering feeds/index
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 44ms (View: 32, DB: 3) | 200 OK [http://localhost/feed.rss]
+
+
+Processing FeedsController#index to rss (for 127.0.0.1 at 2009-01-20 19:40:44) [GET]
+  Parameters: {"format"=>"rss", "action"=>"index", "controller"=>"feeds"}
+  [4;35;1mAddressChange Load (1.0ms)[0m   [0mSELECT * FROM "address_changes" ORDER BY created_at desc LIMIT 50[0m
+Rendering feeds/index
+  [4;36;1mAddress Load (0.3ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 28ms (View: 21, DB: 2) | 200 OK [http://localhost/feed.rss]
+
+
+Processing FeedsController#index to rss (for 127.0.0.1 at 2009-01-20 20:10:48) [GET]
+  Parameters: {"format"=>"rss", "action"=>"index", "controller"=>"feeds"}
+  [4;36;1mAddressChange Load (1.1ms)[0m   [0;1mSELECT * FROM "address_changes" ORDER BY created_at desc LIMIT 50[0m
+Rendering feeds/index
+  [4;35;1mAddress Load (0.3ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 33ms (View: 25, DB: 2) | 200 OK [http://localhost/feed.rss]
+
+
+Processing FeedsController#index to rss (for 127.0.0.1 at 2009-01-20 20:40:46) [GET]
+  Parameters: {"format"=>"rss", "action"=>"index", "controller"=>"feeds"}
+  [4;35;1mAddressChange Load (1.2ms)[0m   [0mSELECT * FROM "address_changes" ORDER BY created_at desc LIMIT 50[0m
+Rendering feeds/index
+  [4;36;1mAddress Load (1.3ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 38ms (View: 28, DB: 3) | 200 OK [http://localhost/feed.rss]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2009-01-20 20:43:13) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Cookie set: user_credentials=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://localhost:3000/user_session/new
+Completed in 21ms (DB: 1) | 302 Found [http://localhost/user_session]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-01-20 20:43:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 30ms (View: 8, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-01-20 20:43:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (112.3ms)
+Completed in 151ms (View: 134, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-01-20 20:44:25) [POST]
+  Parameters: {"user"=>{"photo"=>"", "password_confirmation"=>"[FILTERED]", "phone"=>"", "first_name"=>"Jessica", "password"=>"[FILTERED]", "last_name"=>"Winter", "email"=>"jwinter@pobox.com"}, "commit"=>"Create", "action"=>"create", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "controller"=>"users", "address"=>{"city"=>"Bedford", "zip"=>"76021", "street1"=>"2521 Stonegate Dr. North", "street2"=>"", "state"=>"TX"}}
+[paperclip] Paperclip attachment photo on User initialized.
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'jwinter@pobox.com') LIMIT 1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'e146526b914545df119b5b1e710856b07b241ce84c0751e34ba2f7c35fd623410715129cb3624c0dc23df4ca6257b23a5d6ff9b5eceb76adbaa282a5bda1b60a') LIMIT 1[0m
+  [4;35;1mUser Create (0.6ms)[0m   [0mINSERT INTO "users" ("updated_at", "photo_file_name", "photo_file_size", "crypted_password", "password_salt", "admin", "photo_updated_at", "photo_content_type", "phone", "persistence_token", "first_name", "last_name", "email", "created_at") VALUES('2009-01-21 01:44:25', NULL, NULL, '9299afd20af5fbba97781b5b1111a9a861dce6216d7f5df7f90044a40bb046eb001b2103c7ad107978e9fac6839dd9424230ba1e42c65a61a5467579915a1159', '110d32e634be6720a55042a0d82e00d29d7f30a4aa5b6f8485a9645a82864f0c3431b29f2b7c86c2364eed7dc776bd0614a302dba91f7c3038c0b9df8915d32d', NULL, NULL, NULL, '', 'e146526b914545df119b5b1e710856b07b241ce84c0751e34ba2f7c35fd623410715129cb3624c0dc23df4ca6257b23a5d6ff9b5eceb76adbaa282a5bda1b60a', 'Jessica', 'Winter', 'jwinter@pobox.com', '2009-01-21 01:44:25')[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE "users" SET "created_at" = '2009-01-21 01:44:25', "persistence_token" = 'e146526b914545df119b5b1e710856b07b241ce84c0751e34ba2f7c35fd623410715129cb3624c0dc23df4ca6257b23a5d6ff9b5eceb76adbaa282a5bda1b60a', "phone" = '', "email" = 'jwinter@pobox.com', "crypted_password" = '9299afd20af5fbba97781b5b1111a9a861dce6216d7f5df7f90044a40bb046eb001b2103c7ad107978e9fac6839dd9424230ba1e42c65a61a5467579915a1159', "last_name" = 'Winter', "updated_at" = '2009-01-21 01:44:25', "first_name" = 'Jessica', "password_salt" = '110d32e634be6720a55042a0d82e00d29d7f30a4aa5b6f8485a9645a82864f0c3431b29f2b7c86c2364eed7dc776bd0614a302dba91f7c3038c0b9df8915d32d' WHERE "id" = 4[0m
+[paperclip] Saving attachments.
+[paperclip] Saving files for photo
+[paperclip] Deleting files for photo
+[paperclip] Writing files for photo
+  [4;35;1mAddress Create (0.2ms)[0m   [0mINSERT INTO "addresses" ("city", "zip", "latitude", "updated_at", "street1", "street2", "user_id", "longitude", "state", "created_at") VALUES('Bedford', '76021', 32.847023, '2009-01-21 01:44:26', '2521 Stonegate Dr. North', '', 4, -97.159102, 'TX', '2009-01-21 01:44:26')[0m
+  [4;36;1mAddressChange Create (0.4ms)[0m   [0;1mINSERT INTO "address_changes" ("updated_at", "address_id", "created_at") VALUES('2009-01-21 01:44:26', 4, '2009-01-21 01:44:26')[0m
+Cookie set: user_credentials=e146526b914545df119b5b1e710856b07b241ce84c0751e34ba2f7c35fd623410715129cb3624c0dc23df4ca6257b23a5d6ff9b5eceb76adbaa282a5bda1b60a; path=/
+[paperclip] Saving attachments.
+[paperclip] Saving files for photo
+[paperclip] Deleting files for photo
+[paperclip] Writing files for photo
+Redirected to #<User:0x21ff214>
+Completed in 406ms (DB: 2) | 302 Found [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-01-20 20:44:26) [GET]
+  Parameters: {"action"=>"show", "id"=>"4", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 4) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+[paperclip] Paperclip attachment photo on User initialized.
+Completed in 51ms (View: 23, DB: 1) | 200 OK [http://localhost/users/4]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-01-20 20:44:26) [GET]
+
+
+ActionController::RoutingError (No route matches "/photos/original/missing.png" with {:method=>:get}):
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-20 20:44:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mAddress Load (0.5ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 4) LIMIT 1[0m
+  [4;35;1mAddress Load (0.3ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (1.8ms)
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (1.1ms)
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 3) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (1.6ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 4) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (1.7ms)
+Rendering template within layouts/application
+Rendering users/index
+Completed in 58ms (View: 13, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-01-20 20:45:15) [GET]
+
+
+ActionController::RoutingError (No route matches "/photos/original/missing.png" with {:method=>:get}):
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-01-20 20:45:17) [GET]
+
+
+ActionController::RoutingError (No route matches "/photos/original/missing.png" with {:method=>:get}):
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing FriendshipsController#index (for 127.0.0.1 at 2009-01-20 20:45:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"friendships", "user_id"=>"4"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering friendships/index
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("users"."id" = 1) AND ("friendships".user_id = 4 ) LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("users"."id" = 2) AND ("friendships".user_id = 4 ) LIMIT 1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("users"."id" = 3) AND ("friendships".user_id = 4 ) LIMIT 1[0m
+Completed in 32ms (View: 11, DB: 2) | 200 OK [http://localhost/users/4/friendships]
+
+
+Processing UsersController#update_friends (for 127.0.0.1 at 2009-01-20 20:45:31) [PUT]
+  Parameters: {"user"=>{"friend_ids"=>["", "1", "2"]}, "commit"=>"Save", "action"=>"update_friends", "_method"=>"put", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "id"=>"4", "controller"=>"users"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" IN (1,2)) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("friendships".user_id = 4 ) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO "friendships" ("id", "user_id", "friend_id") VALUES (1, 4, 1)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSQLite3::SQLException: PRIMARY KEY must be unique: INSERT INTO "friendships" ("id", "user_id", "friend_id") VALUES (2, 4, 2)[0m
+
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: PRIMARY KEY must be unique: INSERT INTO "friendships" ("id", "user_id", "friend_id") VALUES (2, 4, 2)):
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract_adapter.rb:188:in `log'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/sqlite_adapter.rb:372:in `catch_schema_changes'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/database_statements.rb:171:in `insert_sql'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/sqlite_adapter.rb:146:in `insert_sql'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/database_statements.rb:44:in `insert_without_query_dirty'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:18:in `insert'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/has_and_belongs_to_many_association.rb:56:in `insert_record'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:115:in `concat'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:423:in `add_record_to_target_with_callbacks'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:114:in `concat'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:112:in `each'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:112:in `concat'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:137:in `transaction'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/database_statements.rb:66:in `transaction'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/transactions.rb:129:in `transaction'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:136:in `transaction'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:111:in `concat'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:318:in `replace'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:137:in `transaction'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/database_statements.rb:66:in `transaction'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/transactions.rb:129:in `transaction'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:136:in `transaction'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:316:in `replace'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations.rb:1322:in `friends='
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations.rb:1328:in `send'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations.rb:1328:in `friend_ids='
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:2587:in `send'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:2587:in `attributes='
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:2583:in `each'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:2583:in `attributes='
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:2469:in `update_attributes'
+    /app/controllers/users_controller.rb:102:in `update_friends'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:106:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:106:in `respond_to'
+    /app/controllers/users_controller.rb:101:in `update_friends'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (57.3ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (1.2ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing FriendshipsController#index (for 127.0.0.1 at 2009-01-20 20:45:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"friendships", "user_id"=>"4"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering friendships/index
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("users"."id" = 1) AND ("friendships".user_id = 4 ) LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("users"."id" = 2) AND ("friendships".user_id = 4 ) LIMIT 1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("users"."id" = 3) AND ("friendships".user_id = 4 ) LIMIT 1[0m
+Completed in 28ms (View: 8, DB: 2) | 200 OK [http://localhost/users/4/friendships]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-20 20:45:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mAddress Load (0.7ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 4) LIMIT 1[0m
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (1.0ms)
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (0.8ms)
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 3) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (0.7ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 4) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (0.6ms)
+Rendering template within layouts/application
+Rendering users/index
+Completed in 154ms (View: 8, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-20 20:45:49) [GET]
+  Parameters: {"friends_only"=>"true", "action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [4;35;1mAddress Load (0.5ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 4) LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("friendships".user_id = 4 ) [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 35ms (View: 5, DB: 1) | 200 OK [http://localhost/users?friends_only=true]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-20 20:45:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mAddress Load (1.2ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 4) LIMIT 1[0m
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (1.0ms)
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (0.7ms)
+  [4;36;1mAddress Load (0.3ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 3) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (0.8ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 4) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (0.9ms)
+Rendering template within layouts/application
+Rendering users/index
+Completed in 57ms (View: 15, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing FeedsController#index to rss (for 127.0.0.1 at 2009-01-20 21:10:49) [GET]
+  Parameters: {"format"=>"rss", "action"=>"index", "controller"=>"feeds"}
+  [4;36;1mAddressChange Load (1.3ms)[0m   [0;1mSELECT * FROM "address_changes" ORDER BY created_at desc LIMIT 50[0m
+Rendering feeds/index
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 4) [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mAddress Load (0.7ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;36;1mUser Load (2.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 150ms (View: 137, DB: 6) | 200 OK [http://localhost/feed.rss]
+
+
+Processing FeedsController#index to rss (for 127.0.0.1 at 2009-01-20 21:40:52) [GET]
+  Parameters: {"format"=>"rss", "action"=>"index", "controller"=>"feeds"}
+  [4;35;1mAddressChange Load (2.1ms)[0m   [0mSELECT * FROM "address_changes" ORDER BY created_at desc LIMIT 50[0m
+Rendering feeds/index
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses"."id" = 4) [0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 46ms (View: 33, DB: 4) | 200 OK [http://localhost/feed.rss]
+
+
+Processing FeedsController#index to rss (for 127.0.0.1 at 2009-01-20 22:10:53) [GET]
+  Parameters: {"format"=>"rss", "action"=>"index", "controller"=>"feeds"}
+  [4;36;1mAddressChange Load (1.5ms)[0m   [0;1mSELECT * FROM "address_changes" ORDER BY created_at desc LIMIT 50[0m
+Rendering feeds/index
+  [4;35;1mAddress Load (1.8ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 4) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 40ms (View: 31, DB: 5) | 200 OK [http://localhost/feed.rss]
+
+
+Processing FeedsController#index to rss (for 127.0.0.1 at 2009-01-20 22:40:26) [GET]
+  Parameters: {"format"=>"rss", "action"=>"index", "controller"=>"feeds"}
+  [4;35;1mAddressChange Load (1.1ms)[0m   [0mSELECT * FROM "address_changes" ORDER BY created_at desc LIMIT 50[0m
+Rendering feeds/index
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses"."id" = 4) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 40ms (View: 31, DB: 3) | 200 OK [http://localhost/feed.rss]
+
+
+Processing FeedsController#index to rss (for 127.0.0.1 at 2009-01-20 23:10:29) [GET]
+  Parameters: {"format"=>"rss", "action"=>"index", "controller"=>"feeds"}
+  [4;36;1mAddressChange Load (8.4ms)[0m   [0;1mSELECT * FROM "address_changes" ORDER BY created_at desc LIMIT 50[0m
+Rendering feeds/index
+  [4;35;1mAddress Load (0.3ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 4) [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 70ms (View: 32, DB: 10) | 200 OK [http://localhost/feed.rss]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2009-01-20 23:13:39) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+Cookie set: user_credentials=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://localhost:3000/user_session/new
+Completed in 19ms (DB: 0) | 302 Found [http://localhost/user_session]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-01-20 23:13:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 20ms (View: 6, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-01-20 23:13:43) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"password"=>"[FILTERED]", "remember_me"=>"0", "email"=>"foo@gmail.com"}, "action"=>"create", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'foo@gmail.com') LIMIT 1[0m
+[paperclip] Saving attachments.
+[paperclip] Paperclip attachment photo on User initialized.
+[paperclip] Saving files for photo
+[paperclip] Deleting files for photo
+[paperclip] Writing files for photo
+Cookie set: user_credentials=e507c6e1246eb8c7b7a4462e965017faa8e0ef2f34985138c7627396fc0a0d92c16dcf82256098c73382007665bb0b2e2f799a4c4197c2626560e1f29412f065; path=/
+Redirected to /users
+Completed in 18ms (DB: 0) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-20 23:13:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (0.9ms)
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (0.8ms)
+  [4;36;1mAddress Load (0.3ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 3) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (0.6ms)
+  [4;35;1mAddress Load (0.3ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 4) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (0.7ms)
+Rendering template within layouts/application
+Rendering users/index
+Completed in 44ms (View: 9, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-01-20 23:14:15) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+[paperclip] Paperclip attachment photo on User initialized.
+Completed in 122ms (View: 99, DB: 1) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-20 23:14:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (1.4ms)
+  [4;35;1mAddress Load (0.5ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (0.8ms)
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 3) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (1.1ms)
+  [4;35;1mAddress Load (0.5ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 4) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (0.9ms)
+Rendering template within layouts/application
+Rendering users/index
+Completed in 56ms (View: 14, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-01-20 23:14:23) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2", "controller"=>"users"}
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (7.2ms)
+Completed in 52ms (View: 17, DB: 2) | 200 OK [http://localhost/users/2/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-01-20 23:14:39) [PUT]
+  Parameters: {"user"=>{"photo"=>"", "password_confirmation"=>"[FILTERED]", "admin"=>"0", "phone"=>"555-555-1212", "first_name"=>"Test", "password"=>"[FILTERED]", "last_name"=>"User", "email"=>"test@example.com"}, "commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "id"=>"2", "controller"=>"users", "address"=>{"city"=>"Columbus", "zip"=>"43220", "street1"=>"1121 Millcreek Ln", "street2"=>"", "state"=>"OH"}}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mAddress Load (0.5ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE "users" SET "phone" = '555-555-1212', "updated_at" = '2009-01-21 04:14:39' WHERE "id" = 2[0m
+[paperclip] Saving attachments.
+[paperclip] Saving files for photo
+[paperclip] Deleting files for photo
+[paperclip] Writing files for photo
+  [4;35;1mAddressChange Create (1.2ms)[0m   [0mINSERT INTO "address_changes" ("updated_at", "address_id", "created_at") VALUES('2009-01-21 04:14:39', 2, '2009-01-21 04:14:39')[0m
+Redirected to #<User:0x21c1f2c>
+Completed in 475ms (DB: 3) | 302 Found [http://localhost/users/2]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-01-20 23:14:39) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"users"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+[paperclip] Paperclip attachment photo on User initialized.
+Completed in 137ms (View: 109, DB: 1) | 200 OK [http://localhost/users/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-01-20 23:14:40) [GET]
+
+
+ActionController::RoutingError (No route matches "/photos/original/missing.png" with {:method=>:get}):
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-20 23:14:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (1.3ms)
+  [4;35;1mAddress Load (0.5ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (0.9ms)
+  [4;36;1mAddress Load (0.6ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 3) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (0.7ms)
+  [4;35;1mAddress Load (0.3ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 4) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (0.6ms)
+Rendering template within layouts/application
+Rendering users/index
+Completed in 48ms (View: 8, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-20 23:14:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (1.3ms)
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (1.0ms)
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 3) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (0.7ms)
+  [4;36;1mAddress Load (0.3ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 4) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (0.7ms)
+Rendering template within layouts/application
+Rendering users/index
+Completed in 49ms (View: 10, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-20 23:14:52) [GET]
+  Parameters: {"friends_only"=>"true", "action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mAddress Load (0.5ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("friendships".user_id = 1 ) [0m
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (0.9ms)
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 3) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (0.7ms)
+Rendering template within layouts/application
+Rendering users/index
+Completed in 62ms (View: 9, DB: 0) | 200 OK [http://localhost/users?friends_only=true]
+
+
+Processing FriendshipsController#index (for 127.0.0.1 at 2009-01-20 23:14:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"friendships", "user_id"=>"2"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering friendships/index
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("users"."id" = 1) AND ("friendships".user_id = 2 ) LIMIT 1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("users"."id" = 3) AND ("friendships".user_id = 2 ) LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("users"."id" = 4) AND ("friendships".user_id = 2 ) LIMIT 1[0m
+Completed in 29ms (View: 7, DB: 2) | 200 OK [http://localhost/users/2/friendships]
+
+
+Processing UsersController#update_friends (for 127.0.0.1 at 2009-01-20 23:15:00) [PUT]
+  Parameters: {"user"=>{"friend_ids"=>["", "3", "4"]}, "commit"=>"Save", "action"=>"update_friends", "_method"=>"put", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "id"=>"2", "controller"=>"users"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" IN (3,4)) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("friendships".user_id = 2 ) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSQLite3::SQLException: PRIMARY KEY must be unique: INSERT INTO "friendships" ("id", "user_id", "friend_id") VALUES (3, 2, 3)[0m
+
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: PRIMARY KEY must be unique: INSERT INTO "friendships" ("id", "user_id", "friend_id") VALUES (3, 2, 3)):
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract_adapter.rb:188:in `log'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/sqlite_adapter.rb:372:in `catch_schema_changes'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/database_statements.rb:171:in `insert_sql'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/sqlite_adapter.rb:146:in `insert_sql'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/database_statements.rb:44:in `insert_without_query_dirty'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:18:in `insert'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/has_and_belongs_to_many_association.rb:56:in `insert_record'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:115:in `concat'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:423:in `add_record_to_target_with_callbacks'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:114:in `concat'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:112:in `each'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:112:in `concat'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:137:in `transaction'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/database_statements.rb:66:in `transaction'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/transactions.rb:129:in `transaction'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:136:in `transaction'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:111:in `concat'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:318:in `replace'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:137:in `transaction'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/database_statements.rb:66:in `transaction'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/transactions.rb:129:in `transaction'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:136:in `transaction'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:316:in `replace'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations.rb:1322:in `friends='
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations.rb:1328:in `send'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations.rb:1328:in `friend_ids='
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:2587:in `send'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:2587:in `attributes='
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:2583:in `each'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:2583:in `attributes='
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:2469:in `update_attributes'
+    /app/controllers/users_controller.rb:102:in `update_friends'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:106:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:106:in `respond_to'
+    /app/controllers/users_controller.rb:101:in `update_friends'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (143.7ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (1.3ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing FriendshipsController#index (for 127.0.0.1 at 2009-01-20 23:19:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"friendships", "user_id"=>"2"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering friendships/index
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("users"."id" = 1) AND ("friendships".user_id = 2 ) LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("users"."id" = 3) AND ("friendships".user_id = 2 ) LIMIT 1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("users"."id" = 4) AND ("friendships".user_id = 2 ) LIMIT 1[0m
+Completed in 30ms (View: 8, DB: 2) | 200 OK [http://localhost/users/2/friendships]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-20 23:19:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mAddress Load (0.5ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (1.0ms)
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (0.8ms)
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 3) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (0.7ms)
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 4) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (0.8ms)
+Rendering template within layouts/application
+Rendering users/index
+Completed in 140ms (View: 104, DB: 0) | 200 OK [http://localhost/users/]
+
+
+Processing FriendshipsController#index (for 127.0.0.1 at 2009-01-20 23:19:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"friendships", "user_id"=>"1"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering friendships/index
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("users"."id" = 2) AND ("friendships".user_id = 1 ) LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("users"."id" = 3) AND ("friendships".user_id = 1 ) LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("users"."id" = 4) AND ("friendships".user_id = 1 ) LIMIT 1[0m
+Completed in 32ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/friendships]
+
+
+Processing UsersController#update_friends (for 127.0.0.1 at 2009-01-20 23:19:24) [PUT]
+  Parameters: {"user"=>{"friend_ids"=>["", "2"]}, "commit"=>"Save", "action"=>"update_friends", "_method"=>"put", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("friendships".user_id = 1 ) [0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mDELETE FROM "friendships" WHERE user_id = 1 AND friend_id IN (3)[0m
+[paperclip] Paperclip attachment photo on User initialized.
+[paperclip] Saving attachments.
+[paperclip] Saving files for photo
+[paperclip] Deleting files for photo
+[paperclip] Writing files for photo
+Redirected to /users/1/friendships
+Completed in 35ms (DB: 3) | 302 Found [http://localhost/users/1/update_friends]
+
+
+Processing FriendshipsController#index (for 127.0.0.1 at 2009-01-20 23:19:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"friendships", "user_id"=>"1"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering friendships/index
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("users"."id" = 2) AND ("friendships".user_id = 1 ) LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("users"."id" = 3) AND ("friendships".user_id = 1 ) LIMIT 1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("users"."id" = 4) AND ("friendships".user_id = 1 ) LIMIT 1[0m
+Completed in 29ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/friendships]
+
+
+Processing UsersController#update_friends (for 127.0.0.1 at 2009-01-20 23:19:27) [PUT]
+  Parameters: {"user"=>{"friend_ids"=>["", "2", "3"]}, "commit"=>"Save", "action"=>"update_friends", "_method"=>"put", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" IN (2,3)) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("friendships".user_id = 1 ) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO "friendships" ("id", "user_id", "friend_id") VALUES (3, 1, 3)[0m
+[paperclip] Paperclip attachment photo on User initialized.
+[paperclip] Saving attachments.
+[paperclip] Saving files for photo
+[paperclip] Deleting files for photo
+[paperclip] Writing files for photo
+Redirected to /users/1/friendships
+Completed in 30ms (DB: 3) | 302 Found [http://localhost/users/1/update_friends]
+
+
+Processing FriendshipsController#index (for 127.0.0.1 at 2009-01-20 23:19:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"friendships", "user_id"=>"1"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering friendships/index
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("users"."id" = 2) AND ("friendships".user_id = 1 ) LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("users"."id" = 3) AND ("friendships".user_id = 1 ) LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("users"."id" = 4) AND ("friendships".user_id = 1 ) LIMIT 1[0m
+Completed in 34ms (View: 7, DB: 2) | 200 OK [http://localhost/users/1/friendships]
+
+
+Processing UsersController#update_friends (for 127.0.0.1 at 2009-01-20 23:19:29) [PUT]
+  Parameters: {"user"=>{"friend_ids"=>["", "2", "3", "4"]}, "commit"=>"Save", "action"=>"update_friends", "_method"=>"put", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (1.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" IN (2,3,4)) [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("friendships".user_id = 1 ) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "friendships" ("id", "user_id", "friend_id") VALUES (4, 1, 4)[0m
+[paperclip] Paperclip attachment photo on User initialized.
+[paperclip] Saving attachments.
+[paperclip] Saving files for photo
+[paperclip] Deleting files for photo
+[paperclip] Writing files for photo
+Redirected to /users/1/friendships
+Completed in 30ms (DB: 4) | 302 Found [http://localhost/users/1/update_friends]
+
+
+Processing FriendshipsController#index (for 127.0.0.1 at 2009-01-20 23:19:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"friendships", "user_id"=>"1"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering friendships/index
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("users"."id" = 2) AND ("friendships".user_id = 1 ) LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("users"."id" = 3) AND ("friendships".user_id = 1 ) LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("users"."id" = 4) AND ("friendships".user_id = 1 ) LIMIT 1[0m
+Completed in 137ms (View: 8, DB: 3) | 200 OK [http://localhost/users/1/friendships]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-20 23:19:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mAddress Load (1.5ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (1.1ms)
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (1.2ms)
+  [4;36;1mAddress Load (0.7ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 3) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (0.8ms)
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 4) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (0.8ms)
+Rendering template within layouts/application
+Rendering users/index
+Completed in 60ms (View: 17, DB: 0) | 200 OK [http://localhost/users/]
+
+
+Processing FriendshipsController#index (for 127.0.0.1 at 2009-01-20 23:19:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"friendships", "user_id"=>"2"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering friendships/index
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("users"."id" = 1) AND ("friendships".user_id = 2 ) LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("users"."id" = 3) AND ("friendships".user_id = 2 ) LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("users"."id" = 4) AND ("friendships".user_id = 2 ) LIMIT 1[0m
+Completed in 28ms (View: 7, DB: 2) | 200 OK [http://localhost/users/2/friendships]
+
+
+Processing UsersController#update_friends (for 127.0.0.1 at 2009-01-20 23:19:55) [PUT]
+  Parameters: {"user"=>{"friend_ids"=>["", "1", "3", "4"]}, "commit"=>"Save", "action"=>"update_friends", "_method"=>"put", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "id"=>"2", "controller"=>"users"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mUser Load (1.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" IN (1,3,4)) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("friendships".user_id = 2 ) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO "friendships" ("id", "user_id", "friend_id") VALUES (1, 2, 1)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: PRIMARY KEY must be unique: INSERT INTO "friendships" ("id", "user_id", "friend_id") VALUES (3, 2, 3)[0m
+
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: PRIMARY KEY must be unique: INSERT INTO "friendships" ("id", "user_id", "friend_id") VALUES (3, 2, 3)):
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract_adapter.rb:188:in `log'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/sqlite_adapter.rb:372:in `catch_schema_changes'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/database_statements.rb:171:in `insert_sql'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/sqlite_adapter.rb:146:in `insert_sql'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/database_statements.rb:44:in `insert_without_query_dirty'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:18:in `insert'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/has_and_belongs_to_many_association.rb:56:in `insert_record'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:115:in `concat'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:423:in `add_record_to_target_with_callbacks'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:114:in `concat'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:112:in `each'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:112:in `concat'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:137:in `transaction'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/database_statements.rb:66:in `transaction'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/transactions.rb:129:in `transaction'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:136:in `transaction'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:111:in `concat'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:318:in `replace'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:137:in `transaction'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/database_statements.rb:66:in `transaction'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/transactions.rb:129:in `transaction'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:136:in `transaction'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:316:in `replace'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations.rb:1322:in `friends='
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations.rb:1328:in `send'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations.rb:1328:in `friend_ids='
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:2587:in `send'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:2587:in `attributes='
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:2583:in `each'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:2583:in `attributes='
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:2469:in `update_attributes'
+    /app/controllers/users_controller.rb:102:in `update_friends'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:106:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:106:in `respond_to'
+    /app/controllers/users_controller.rb:101:in `update_friends'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (52.0ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (1.1ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
