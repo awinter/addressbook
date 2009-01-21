@@ -1,0 +1,27 @@
+=Address Book with Google Maps Integration
+
+Harvard CSCI E-168, Fall 2008
+Project: Final Project, Address Book
+By: Adam Winter
+email: awinter@fas.harvard.edu
+Due date: Wednesday, January 21
+
+Address Book with Google Maps Integration (snazzy name due in version 2.0) 
+is intended as a way to keep track of the geographical movement of friends. 
+Often we are at organizations or educational institutions, and we'd like to 
+keep track of a peers and where they are located. This app combines the 
+functionality of a shared address book with integration to Google Maps.
+
+==Quick Start
+
+This is a standard rails app. There are some third party gems that are required; however 
+those have been unpacked into the app's vendor directory.
+
+==Use Cases
+
+foo
+
+
+==Implementation
+
+foo
