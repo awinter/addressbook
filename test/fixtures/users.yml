@@ -4,20 +4,10 @@ one:
   first_name: MyString
   last_name: MyString
   email: MyString
-  street1: MyString
-  street2: MyString
-  city: MyString
-  state: MyString
-  zip: MyString
   phone: MyString
 
 two:
   first_name: MyString
   last_name: MyString
   email: MyString
-  street1: MyString
-  street2: MyString
-  city: MyString
-  state: MyString
-  zip: MyString
   phone: MyString

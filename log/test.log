@@ -1,0 +1,61 @@
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-01-21 17:09:27) [POST]
+  Parameters: {"user"=>{}, "action"=>"create", "controller"=>"users"}
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '097ffca78ef36b7e48d28223932ceddc779f44e35b918babd9d46c4a82b7570131532d466a4df5cc7aec2727a87ff8dbba485d3eb40e62e53358331f981bae6a') LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (8.7ms)
+Completed in 102ms (View: 12, DB: 1) | 200 OK [http://test.host/users?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#destroy (for 0.0.0.0 at 2009-01-21 17:09:27) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"953125641", "controller"=>"users"}
+Redirected to http://test.host/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/users/953125641]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#edit (for 0.0.0.0 at 2009-01-21 17:09:27) [GET]
+  Parameters: {"action"=>"edit", "id"=>"953125641", "controller"=>"users"}
+Redirected to http://test.host/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/users/953125641/edit]
+
+
+Processing UsersController#index (for 0.0.0.0 at 2009-01-21 17:09:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Redirected to http://test.host/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/users]
+
+
+Processing UsersController#new (for 0.0.0.0 at 2009-01-21 17:09:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (6.4ms)
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://test.host/users/new]
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#show (for 0.0.0.0 at 2009-01-21 17:09:27) [GET]
+  Parameters: {"action"=>"show", "id"=>"953125641", "controller"=>"users"}
+Redirected to http://test.host/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/users/953125641]
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#update (for 0.0.0.0 at 2009-01-21 17:09:27) [PUT]
+  Parameters: {"user"=>{}, "action"=>"update", "id"=>"953125641", "controller"=>"users"}
+Redirected to http://test.host/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/users/953125641?]
