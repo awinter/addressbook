@@ -9,18 +9,22 @@
 <br />
 
 <table>
-  <tr>
-    <th>First name</th>
-    <th>Last name</th>
-    <th>Email</th>
-    <th>Street1</th>
-    <th>Street2</th>
-    <th>City</th>
-    <th>State</th>
-    <th>Zip</th>
-    <th>Phone</th>
-  </tr>
-
+	<% if @users.size == 0 %>
+		<tr><td>Come on! You're not that much of a loner. Choose your <%= link_to 'friends', user_friendships_path(current_user) %>!</td></tr>
+	<% else %>
+	  <tr>
+	    <th>First name</th>
+	    <th>Last name</th>
+	    <th>Email</th>
+	    <th>Street1</th>
+	    <th>Street2</th>
+	    <th>City</th>
+	    <th>State</th>
+	    <th>Zip</th>
+	    <th>Phone</th>
+	  </tr>
+	<% end %>
+	
 <% for user in @users %>
   <tr>
     <td><%=h user.first_name %></td>
