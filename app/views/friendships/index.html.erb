@@ -3,22 +3,25 @@
 <% form_tag update_friends_user_path(@user), :method => :put do %>
 	<%= hidden_field_tag "user[friend_ids][]", "" %>
 	<table>
-	  <tr>
-	    <th>Friend?</th>
-	    <th>First name</th>
-	    <th>Last name</th>
-	    <th>Email</th>
-	  </tr>
-
-	<% for user in @users %>
-	  <tr>
-	    <td><%= check_box_tag "user[friend_ids][]", user.id, @user.friends.include?(user) %></td>
-	    <td><%=h user.first_name %></td>
-	    <td><%=h user.last_name %></td>
-	    <td><%=h user.email %></td>
-	    <td><%= link_to 'Show', user %></td>
-	  </tr>
-	<% end %>
+		<% if @users.size == 0 %>
+			<tr><td>Sorry, there are no other users in the system for you to select as friends. Please invite your buddies to join.</td></tr>
+		<% else %>
+	 	    <tr>
+		      <th>Friend?</th>
+		      <th>First name</th>
+		      <th>Last name</th>
+		      <th>Email</th>
+		    </tr>
+			<% for user in @users %>
+			  <tr>
+			    <td><%= check_box_tag "user[friend_ids][]", user.id, @user.friends.include?(user) %></td>
+			    <td><%=h user.first_name %></td>
+			    <td><%=h user.last_name %></td>
+			    <td><%=h user.email %></td>
+			    <td><%= link_to 'Show', user %></td>
+			  </tr>
+			<% end %>
+		<% end %>
 	</table>
 
 	<%= submit_tag "Save" %><br/>
