@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(:version => 20090120205930) do
     t.datetime "updated_at"
   end
 
-  create_table "friendships", :force => true do |t|
+  create_table "friendships", :id => false, :force => true do |t|
     t.integer "user_id"
     t.integer "friend_id"
   end
