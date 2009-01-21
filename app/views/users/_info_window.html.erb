@@ -1,6 +1,6 @@
-
-<%= image_tag user.photo.url, :width => 50 %>
-
+<% unless user.photo_file_name.nil? %>
+	<%= image_tag user.photo.url, :width => 50 %>
+<% end %>
 <b>
 	<%= user.first_name %> <%= user.last_name %>
 	<%= user.phone %><br />

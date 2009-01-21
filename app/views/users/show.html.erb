@@ -1,6 +1,8 @@
-<p>
-  <%=image_tag @user.photo.url, :height => 200 %>
-</p>
+<% unless @user.photo_file_name.nil? %>
+	<p>
+	  <%=image_tag @user.photo.url, :height => 200 %>
+	</p>
+<% end %>
 <p>
   <b>First name:</b>
   <%=h @user.first_name %>
