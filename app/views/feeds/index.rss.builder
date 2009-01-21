@@ -8,10 +8,7 @@ xml.rss :version => "2.0" do
     for change in @changes
       xml.item do
         xml.title "#{change.address.user.full_name} has moved to #{change.address.full_address}"
-        #xml.description 'foobar'
         xml.pubDate change.created_at.to_s(:rfc822)
-        # xml.link formatted_user_url(user, :rss)
-        # xml.guid formatted_user_url(user, :rss)
       end
     end
   end

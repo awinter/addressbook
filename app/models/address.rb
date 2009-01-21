@@ -9,7 +9,15 @@ class Address < ActiveRecord::Base
   after_save :update_address_changes
   
   def full_address
-    "#{street1},#{street2},#{city},#{state} #{zip}"
+    addr = String.new
+    
+    addr << "#{street1}"
+    addr << (addr == "" ? "#{street2}" : ", #{street2}")
+    addr << (addr == "" ? "#{city}" : ", #{city}")
+    addr << (addr == "" ? "#{state}" : ", #{state}")
+    addr << (addr == "" ? "#{zip}" : " #{zip}")
+
+    return addr
   end
   
   private
