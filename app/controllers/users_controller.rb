@@ -14,9 +14,10 @@ class UsersController < ApplicationController
     @map = GMap.new("map_div")
     @map.control_init(:large_map => true,:map_type => true)
     if current_user.geo_coords
-      @map.center_zoom_init(current_user.geo_coords,4)
+      @map.center_zoom_init(current_user.geo_coords,3)
     else
-      @map.center_zoom_init([75.6,-42.467],4)
+      # Center on Columbus, OH
+      @map.center_zoom_init([40.034874,-83.04701],3)
     end
     
     for user in @users
