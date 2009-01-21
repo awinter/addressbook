@@ -1,7 +1,7 @@
 =Address Book with Google Maps Integration
 
   Harvard CSCI E-168, Fall 2008
-  Project: Final Project, Address Book
+  Project: Final Project
   By: Adam Winter
   email: awinter@fas.harvard.edu
   Due date: Wednesday, January 21, 2009
@@ -63,3 +63,60 @@ Here's how to do something:
 * Using GitHub
 * Tapping into the resources of the Columbus Ruby Brigade
 * RubyKoans from CodeMash
+
+==Project Files
+Here are the important files that make up this project:
+
+  .                                                   
+  |____app                                            
+  | |____controllers                                  
+  | | |____application.rb                             # Base Controller
+  | | |____feeds_controller.rb                        # RSS feeds
+  | | |____friendships_controller.rb                  # Selecting Friends
+  | | |____user_sessions_controller.rb                # Handles Sessions
+  | | |____users_controller.rb                        # Main controller for the Address Book
+  | |____models                                       
+  | | |____address.rb                                 # An address associate with a user
+  | | |____address_change.rb                          # An archive of each change in addresses
+  | | |____user.rb                                    # A user, also a friend model due to many-to-many rel with self
+  | | |____user_session.rb                            # User session
+  | |____views                                        
+  | | |____feeds                                      
+  | | | |____index.rss.builder                        # RSS content
+  | | |____friendships                                
+  | | | |____index.html.erb                           # Friends selection
+  | | |____layouts                                    
+  | | | |____application.html.erb                     # Base layout
+  | | |____user_sessions                              
+  | | | |____new.html.erb                             # Login screen
+  | | |____users                                      
+  | | | |_____form.html.erb                           # Partial: used by show and edit
+  | | | |_____info_window.html.erb                    # Partial: used by Google Map
+  | | | |____edit.html.erb                            # Edit a user
+  | | | |____index.html.erb                           # Show all users
+  | | | |____new.html.erb                             # Create a new user
+  | | | |____show.html.erb                            # Show a single user's information
+  |____config                                         
+  | |____gmaps_api_key.yml                            # Google Maps API key is here
+  | |____initializers                                 
+  | | |____geokit_config.rb                           # Google Maps API key is also here
+  |____db                                             
+  | |____development.sqlite3                          # Development database
+  | |____migrate                                      # Migrations used in development:
+  | | |____20090120145559_create_users.rb             # Users
+  | | |____20090120150513_add_authlogic_fields.rb     # Authentication
+  | | |____20090120155339_admin_flag.rb               # Admin User
+  | | |____20090120171958_add_friends_to_users.rb     # Friends relationship
+  | | |____20090120183916_break_out_address.rb        # Separating Address from User
+  | | |____20090120203435_create_address_changes.rb   # Storing Address Changes separately
+  | | |____20090120205930_user_photo.rb               # Adding a photo to the user
+  |____doc                                            
+  | |____Google Maps API.pdf                          # Official record of Google Maps API key
+  |____README.rdoc                                    # This readme file
+  |____vendor                                         
+  | |____gems                                         
+  | | |____andre-geokit-1.2.0                         # Geocodes addresses
+  | | |____authlogic-1.3.9                            # Provides user authentication
+  | | |____thoughtbot-paperclip-2.2.2                 # Provides easy file uploads
+  | |____plugins                                      
+  | | |____ym4r_gm                                    # Makes integration with Google Maps even easier
