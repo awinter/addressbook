@@ -5,6 +5,7 @@
   By: Adam Winter
   email: awinter@fas.harvard.edu
   Due date: Wednesday, January 21, 2009
+  source: http://github.com/awinter/addressbook
 
 Address Book with Google Maps Integration (snazzy name due in version 2.0) 
 is intended as a way to keep track of the geographical movement of friends. 
@@ -40,25 +41,25 @@ Here's how to do something:
 
 ===Models
 
-Users - stores logins and hashed passwords links to the people model. 
-People - stores personal information, most importantly address information 
-Friends - a many to many relationship between people, describing who are close friends with whom. 
-Maps - cached information 
-Geo Location - locations translated into longitude and latitude 
+* Users - stores logins and hashed passwords links to the people model. 
+* People - stores personal information, most importantly address information 
+* Friends - a many to many relationship between people, describing who are close friends with whom. 
+* Maps - cached information 
+* Geo Location - locations translated into longitude and latitude 
 
 ===Pages
-Login Page 
-Proﬁle Page (includes address) 
-Close Friends Page (allows you to select who your close friends are) 
-Map page (allows you to display all your friends, or just your close friends).
+* Login Page 
+* Proﬁle Page (includes address) 
+* Close Friends Page (allows you to select who your close friends are) 
+* Map page (allows you to display all your friends, or just your close friends).
 
 ===Features
-Integration with Google Maps. 
-Uploading. This will allow users to upload their photos and have them used in Google Markers 
-Feeds. The application will provide an RSS Feed notifying subscribers when someone moves.
+* Integration with Google Maps. 
+* Uploading. This will allow users to upload their photos and have them used in Google Markers 
+* Feeds. The application will provide an RSS Feed notifying subscribers when someone moves.
 
 ==Crow
-Using Git
-Using GitHub
-Tapping into the resources of the Columbus Ruby Brigade
-RubyKoans from CodeMash
+* Using Git
+* Using GitHub
+* Tapping into the resources of the Columbus Ruby Brigade
+* RubyKoans from CodeMash
