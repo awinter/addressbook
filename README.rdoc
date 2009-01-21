@@ -18,11 +18,26 @@ functionality of a shared address book with integration to Google Maps.
 This is a standard rails app. There are some third party gems that are required; however 
 those have been unpacked into the app's vendor directory.
 
-Here's how to do something:
-  do something
-  foo
-  more foo
+To start the app, run:
+  script/server
 
+Note that it is important to continue running the app on localhost:3000, as that was set 
+explicitly in the Google Maps API key being used. Changing that is possible, but will require
+obtaining a new key.
+
+Initially, the following users are in the system:
+* admin@admin.com, password: foofoo, admin: true
+* tester2@foo.com, password: foofoo, admin: flase
+* tester3@foo.com, password: foofoo, admin: flase
+* tester4@foo.com, password: foofoo, admin: flase
+* tester5@foo.com, password: foofoo, admin: flase
+
+If you reset the database, you will likely want to designate at least one user as an admin 
+user. To do that with your first user, use the following steps:
+  script/console
+  u = User.first
+  u.admin = true
+  u.save
 
 ==Use Cases
 
