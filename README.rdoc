@@ -17,6 +17,12 @@ functionality of a shared address book with integration to Google Maps.
 This is a standard rails app. There are some third party gems that are required; however 
 those have been unpacked into the app's vendor directory.
 
+Here's how to do something:
+  do something
+  foo
+  more foo
+
+
 ==Use Cases
 
 foo
