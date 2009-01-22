@@ -72,29 +72,39 @@ RSS:
 ==Implementation
 
 ===Models
-
-* Users - stores logins and hashed passwords links to the people model. 
-* People - stores personal information, most importantly address information 
-* Friends - a many to many relationship between people, describing who are close friends with whom. 
-* Maps - cached information 
-* Geo Location - locations translated into longitude and latitude 
+* Users - stores logins and hashed passwords links to the Addresses model. 
+* Addresses - stores user location information, including cached geocodes 
+* Friendships - a many to many relationship between Users, describing who are close friends with whom. 
+* Address_changes - archives address change events
 
 ===Pages
-* Login Page 
-* Proﬁle Page (includes address) 
+* Login Page - login via email address
+* New user registration Page
+* Show user page
+* Edit user page 
 * Close Friends Page (allows you to select who your close friends are) 
 * Map page (allows you to display all your friends, or just your close friends).
 
 ===Features
-* Integration with Google Maps. 
-* Uploading. This will allow users to upload their photos and have them used in Google Markers 
-* Feeds. The application will provide an RSS Feed notifying subscribers when someone moves.
+* Integration with Google Maps. Includes flyout windows
+* Uploading. Users can upload their photos. They will be displayed in Google Markers as well as their profile.
+* Feeds. The application provides an RSS Feed notifying subscribers when someone moves.
+
+===3rd Party Gems (included in application)
+* Geokit::Geocoders - used to encode addresses to coordinates
+* Authlogic - used for user authentication. I was recommended to this, and felt that it had a more Ruby way of functioning, rather than Restful Authentication's generator-based approach.
+* Paperclip - used to attach files in a way that integrates well with ActiveRecord
+
+==Rails Plugins (included in application)
+* ym4r/gm - used for easy integration of Google Maps with Rails
 
 ==Crow
-* Using Git
-* Using GitHub
-* Tapping into the resources of the Columbus Ruby Brigade
-* RubyKoans from CodeMash
+* I'm particularly happy about how I established a many to many relationship where the same table is on both sides of that relationship.
+* I also like how I was able to so easily store address changes by establishing a has_many relationship with Addresses.
+* Using Git - This was my first project done using git
+* Using GitHub - This was my first project using GitHub, and so the code is published out there
+* I took the advice on learning from multiple sources and talked with members of the Columbus Ruby Brigade. They gave me the tip on using Authlogic over Restful Authentication.
+* Also, I recently went to the CodeMash conference. There I had the opportunity to refresh my core Ruby skills and get back into the Ruby mindset. They offered a great tutorial. Check out +vendor/koans/rubykoans.tgz+. The class was taught be Jim Weirich and Joe O'Brien of EdgeCase.
 
 ==Project Files
 Here are the important files that make up this project:

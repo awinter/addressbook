@@ -1,9 +1,9 @@
 <%# This page provides the contents for the info window when you click on a pin in Google Maps %>
 <% unless user.photo_file_name.nil? %>
-	<%= image_tag user.photo.url, :width => 50 %>
+	<%= image_tag user.photo.url, :width => 50 %><br/>
 <% end %>
 <b>
-	<%= user.first_name %> <%= user.last_name %>
+	<%= user.first_name %> <%= user.last_name %><br/>
 	<%= user.phone %><br />
 	<%= user.email %><br />
 </b>

@@ -14456,3 +14456,758 @@ Rendering feeds/index
   [4;36;1mAddress Load (0.3ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses"."id" = 1) [0m
   [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
 Completed in 46ms (View: 35, DB: 5) | 200 OK [http://localhost/feed.rss]
+
+
+Processing FeedsController#index to rss (for 127.0.0.1 at 2009-01-21 21:32:03) [GET]
+  Parameters: {"format"=>"rss", "action"=>"index", "controller"=>"feeds"}
+  [4;36;1mAddressChange Load (1.7ms)[0m   [0;1mSELECT * FROM "address_changes" ORDER BY created_at desc LIMIT 50[0m
+Rendering feeds/index
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 5) [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 4) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mAddress Load (0.3ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 2) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mAddress Load (0.3ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 1) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 212ms (View: 41, DB: 6) | 200 OK [http://localhost/feed.rss]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-21 21:57:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 5) LIMIT 1[0m
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+Rendered users/_info_window (0.4ms)
+  [4;35;1mAddress Load (0.5ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+Rendered users/_info_window (0.3ms)
+  [4;36;1mAddress Load (0.3ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 3) LIMIT 1[0m
+Rendered users/_info_window (0.3ms)
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 4) LIMIT 1[0m
+Rendered users/_info_window (0.4ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 5) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (2.3ms)
+Rendering template within layouts/application
+Rendering users/index
+Completed in 66ms (View: 13, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2009-01-21 21:58:11) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+Cookie set: user_credentials=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://localhost:3000/user_session/new
+Completed in 17ms (DB: 0) | 302 Found [http://localhost/user_session]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-01-21 21:58:11) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 209ms (View: 7, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-01-21 21:58:15) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"password"=>"[FILTERED]", "remember_me"=>"0", "email"=>"admin@admin.com"}, "action"=>"create", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'admin@admin.com') LIMIT 1[0m
+[paperclip] Saving attachments.
+[paperclip] Paperclip attachment photo on User initialized.
+[paperclip] Saving files for photo
+[paperclip] Deleting files for photo
+[paperclip] Writing files for photo
+Cookie set: user_credentials=64216bc9f22685188da729891a088e828125406109b543549a00593751880418e6c1dc113e6106fe6197826179d8d7c683ab8dff43145f27a4dfcddf8d670f9c; path=/
+Redirected to /users
+Completed in 21ms (DB: 0) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-21 21:58:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+Rendered users/_info_window (0.3ms)
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+Rendered users/_info_window (0.3ms)
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 3) LIMIT 1[0m
+Rendered users/_info_window (0.3ms)
+  [4;35;1mAddress Load (0.3ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 4) LIMIT 1[0m
+Rendered users/_info_window (0.4ms)
+  [4;36;1mAddress Load (0.5ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 5) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (1.3ms)
+Rendering template within layouts/application
+Rendering users/index
+Completed in 48ms (View: 10, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-01-21 21:58:20) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mAddress Load (0.6ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (7.3ms)
+Completed in 37ms (View: 14, DB: 1) | 200 OK [http://localhost/users/1/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-01-21 21:58:29) [PUT]
+  Parameters: {"user"=>{"photo"=>"", "password_confirmation"=>"[FILTERED]", "admin"=>"1", "phone"=>"555-555-1212", "first_name"=>"Adam", "password"=>"[FILTERED]", "last_name"=>"Columbus", "email"=>"admin@admin.com"}, "commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "id"=>"1", "controller"=>"users", "address"=>{"city"=>"Columbus", "zip"=>"43220", "street1"=>"1121 Millcreek Ln", "street2"=>"", "state"=>"OH"}}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mAddress Load (0.5ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "last_name" = 'Columbus', "updated_at" = '2009-01-22 02:58:29' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+[paperclip] Saving files for photo
+[paperclip] Deleting files for photo
+[paperclip] Writing files for photo
+  [4;36;1mAddressChange Create (0.5ms)[0m   [0;1mINSERT INTO "address_changes" ("updated_at", "address_id", "created_at") VALUES('2009-01-22 02:58:29', 1, '2009-01-22 02:58:29')[0m
+Redirected to #<User:0x37b93fc>
+Completed in 285ms (DB: 2) | 302 Found [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-01-21 21:58:30) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 34ms (View: 10, DB: 2) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-21 21:58:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+Rendered users/_info_window (0.3ms)
+  [4;36;1mAddress Load (0.5ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+Rendered users/_info_window (0.3ms)
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 3) LIMIT 1[0m
+Rendered users/_info_window (0.3ms)
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 4) LIMIT 1[0m
+Rendered users/_info_window (0.4ms)
+  [4;35;1mAddress Load (0.6ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 5) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (1.4ms)
+Rendering template within layouts/application
+Rendering users/index
+Completed in 222ms (View: 10, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-01-21 21:58:37) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2", "controller"=>"users"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (8.5ms)
+Completed in 40ms (View: 16, DB: 2) | 200 OK [http://localhost/users/2/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-01-21 21:59:00) [PUT]
+  Parameters: {"user"=>{"photo"=>"", "password_confirmation"=>"[FILTERED]", "admin"=>"0", "phone"=>"", "first_name"=>"Adam", "password"=>"[FILTERED]", "last_name"=>"Newton", "email"=>"tester2@foo.com"}, "commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "id"=>"2", "controller"=>"users", "address"=>{"city"=>"", "zip"=>"02466", "street1"=>"", "street2"=>"", "state"=>""}}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "last_name" = 'Newton', "updated_at" = '2009-01-22 02:59:00', "first_name" = 'Adam', "admin" = 'f' WHERE "id" = 2[0m
+[paperclip] Saving attachments.
+[paperclip] Saving files for photo
+[paperclip] Deleting files for photo
+[paperclip] Writing files for photo
+  [4;35;1mAddressChange Create (0.5ms)[0m   [0mINSERT INTO "address_changes" ("updated_at", "address_id", "created_at") VALUES('2009-01-22 02:59:00', 2, '2009-01-22 02:59:00')[0m
+Redirected to #<User:0x33556e4>
+Completed in 236ms (DB: 2) | 302 Found [http://localhost/users/2]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-01-21 21:59:00) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"users"}
+  [4;36;1mUser Load (7.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mAddress Load (0.7ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 73ms (View: 18, DB: 9) | 200 OK [http://localhost/users/2]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-21 21:59:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+Rendered users/_info_window (0.4ms)
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+Rendered users/_info_window (0.2ms)
+  [4;36;1mAddress Load (0.3ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 3) LIMIT 1[0m
+Rendered users/_info_window (0.3ms)
+  [4;35;1mAddress Load (0.3ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 4) LIMIT 1[0m
+Rendered users/_info_window (0.2ms)
+  [4;36;1mAddress Load (0.3ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 5) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (0.9ms)
+Rendering template within layouts/application
+Rendering users/index
+Completed in 48ms (View: 10, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-01-21 21:59:08) [GET]
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"users"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (8.2ms)
+Completed in 46ms (View: 17, DB: 1) | 200 OK [http://localhost/users/3/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-01-21 21:59:33) [PUT]
+  Parameters: {"user"=>{"photo"=>"", "password_confirmation"=>"[FILTERED]", "admin"=>"0", "phone"=>"555-555-1212", "first_name"=>"Adam", "password"=>"[FILTERED]", "last_name"=>"Austin", "email"=>"tester3@foo.com"}, "commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "id"=>"3", "controller"=>"users", "address"=>{"city"=>"", "zip"=>"78729", "street1"=>"", "street2"=>"", "state"=>""}}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mAddress Load (0.5ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 3) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "phone" = '555-555-1212', "last_name" = 'Austin', "updated_at" = '2009-01-22 02:59:33', "first_name" = 'Adam' WHERE "id" = 3[0m
+[paperclip] Saving attachments.
+[paperclip] Saving files for photo
+[paperclip] Deleting files for photo
+[paperclip] Writing files for photo
+  [4;36;1mAddressChange Create (0.4ms)[0m   [0;1mINSERT INTO "address_changes" ("updated_at", "address_id", "created_at") VALUES('2009-01-22 02:59:33', 3, '2009-01-22 02:59:33')[0m
+Redirected to #<User:0x38883dc>
+Completed in 220ms (DB: 2) | 302 Found [http://localhost/users/3]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-01-21 21:59:33) [GET]
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 41ms (View: 10, DB: 2) | 200 OK [http://localhost/users/3]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-21 21:59:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+Rendered users/_info_window (0.4ms)
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+Rendered users/_info_window (0.3ms)
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 3) LIMIT 1[0m
+Rendered users/_info_window (1.0ms)
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 4) LIMIT 1[0m
+Rendered users/_info_window (1.3ms)
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 5) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (2.1ms)
+Rendering template within layouts/application
+Rendering users/index
+Completed in 64ms (View: 17, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-01-21 21:59:44) [GET]
+  Parameters: {"action"=>"edit", "id"=>"4", "controller"=>"users"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 4) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (8.3ms)
+Completed in 46ms (View: 16, DB: 1) | 200 OK [http://localhost/users/4/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-01-21 22:00:05) [PUT]
+  Parameters: {"user"=>{"photo"=>"", "password_confirmation"=>"[FILTERED]", "admin"=>"0", "phone"=>"561-555-1212", "first_name"=>"Adam", "password"=>"[FILTERED]", "last_name"=>"Boca", "email"=>"tester4@foo.com"}, "commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "id"=>"4", "controller"=>"users", "address"=>{"city"=>"", "zip"=>"33434", "street1"=>"", "street2"=>"", "state"=>""}}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 4) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "phone" = '561-555-1212', "last_name" = 'Boca', "updated_at" = '2009-01-22 03:00:05', "first_name" = 'Adam' WHERE "id" = 4[0m
+[paperclip] Saving attachments.
+[paperclip] Saving files for photo
+[paperclip] Deleting files for photo
+[paperclip] Writing files for photo
+  [4;35;1mAddressChange Create (0.5ms)[0m   [0mINSERT INTO "address_changes" ("updated_at", "address_id", "created_at") VALUES('2009-01-22 03:00:05', 4, '2009-01-22 03:00:05')[0m
+Redirected to #<User:0x344d510>
+Completed in 242ms (DB: 3) | 302 Found [http://localhost/users/4]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-01-21 22:00:05) [GET]
+  Parameters: {"action"=>"show", "id"=>"4", "controller"=>"users"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mAddress Load (0.5ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 4) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 178ms (View: 9, DB: 1) | 200 OK [http://localhost/users/4]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-21 22:00:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mAddress Load (0.5ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+Rendered users/_info_window (0.3ms)
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+Rendered users/_info_window (0.4ms)
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 3) LIMIT 1[0m
+Rendered users/_info_window (0.3ms)
+  [4;35;1mAddress Load (0.5ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 4) LIMIT 1[0m
+Rendered users/_info_window (0.4ms)
+  [4;36;1mAddress Load (0.5ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 5) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (1.2ms)
+Rendering template within layouts/application
+Rendering users/index
+Completed in 54ms (View: 11, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-01-21 22:00:12) [GET]
+  Parameters: {"action"=>"edit", "id"=>"5", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 5) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (7.8ms)
+Completed in 53ms (View: 16, DB: 2) | 200 OK [http://localhost/users/5/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-01-21 22:00:58) [PUT]
+  Parameters: {"user"=>{"photo"=>"", "password_confirmation"=>"[FILTERED]", "admin"=>"0", "phone"=>"555-555-9021", "first_name"=>"Adam", "password"=>"[FILTERED]", "last_name"=>"California", "email"=>"tester5@foo.com"}, "commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "id"=>"5", "controller"=>"users", "address"=>{"city"=>"", "zip"=>"90211", "street1"=>"", "street2"=>"", "state"=>""}}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 5) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "phone" = '555-555-9021', "last_name" = 'California', "updated_at" = '2009-01-22 03:00:58', "first_name" = 'Adam', "admin" = 'f' WHERE "id" = 5[0m
+[paperclip] Saving attachments.
+[paperclip] Saving files for photo
+[paperclip] Deleting files for photo
+[paperclip] Writing files for photo
+  [4;36;1mAddressChange Create (0.6ms)[0m   [0;1mINSERT INTO "address_changes" ("updated_at", "address_id", "created_at") VALUES('2009-01-22 03:00:58', 5, '2009-01-22 03:00:58')[0m
+Redirected to #<User:0x3137574>
+Completed in 370ms (DB: 3) | 302 Found [http://localhost/users/5]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-01-21 22:00:58) [GET]
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mAddress Load (0.5ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 5) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+[paperclip] Paperclip attachment photo on User initialized.
+Completed in 36ms (View: 12, DB: 1) | 200 OK [http://localhost/users/5]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-01-21 22:01:06) [GET]
+  Parameters: {"action"=>"edit", "id"=>"5", "controller"=>"users"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 5) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (9.6ms)
+Completed in 48ms (View: 23, DB: 1) | 200 OK [http://localhost/users/5/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-01-21 22:01:14) [PUT]
+  Parameters: {"user"=>{"photo"=>"", "password_confirmation"=>"[FILTERED]", "admin"=>"0", "phone"=>"555-555-9021", "first_name"=>"Ali", "password"=>"[FILTERED]", "last_name"=>"California", "email"=>"tester5@foo.com"}, "commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "id"=>"5", "controller"=>"users", "address"=>{"city"=>"", "zip"=>"90211", "street1"=>"", "street2"=>"", "state"=>""}}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mAddress Load (0.6ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 5) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2009-01-22 03:01:14', "first_name" = 'Ali' WHERE "id" = 5[0m
+[paperclip] Saving attachments.
+[paperclip] Saving files for photo
+[paperclip] Deleting files for photo
+[paperclip] Writing files for photo
+  [4;35;1mAddressChange Create (0.5ms)[0m   [0mINSERT INTO "address_changes" ("updated_at", "address_id", "created_at") VALUES('2009-01-22 03:01:14', 5, '2009-01-22 03:01:14')[0m
+Redirected to #<User:0x38d95c0>
+Completed in 433ms (DB: 3) | 302 Found [http://localhost/users/5]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-01-21 22:01:14) [GET]
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"users"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mAddress Load (0.5ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 5) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+[paperclip] Paperclip attachment photo on User initialized.
+Completed in 39ms (View: 15, DB: 1) | 200 OK [http://localhost/users/5]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-21 22:01:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mAddress Load (0.5ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+Rendered users/_info_window (0.3ms)
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+Rendered users/_info_window (0.2ms)
+  [4;36;1mAddress Load (0.3ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 3) LIMIT 1[0m
+Rendered users/_info_window (0.2ms)
+  [4;35;1mAddress Load (0.3ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 4) LIMIT 1[0m
+Rendered users/_info_window (0.2ms)
+  [4;36;1mAddress Load (0.3ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 5) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (1.0ms)
+Rendering template within layouts/application
+Rendering users/index
+Completed in 46ms (View: 11, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-01-21 22:01:37) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (8.8ms)
+Completed in 41ms (View: 16, DB: 1) | 200 OK [http://localhost/users/1/edit]
+
+
+Processing FeedsController#index to rss (for 127.0.0.1 at 2009-01-21 22:02:06) [GET]
+  Parameters: {"format"=>"rss", "action"=>"index", "controller"=>"feeds"}
+  [4;36;1mAddressChange Load (2.0ms)[0m   [0;1mSELECT * FROM "address_changes" ORDER BY created_at desc LIMIT 50[0m
+Rendering feeds/index
+  [4;35;1mAddress Load (0.5ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 5) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mAddress Load (0.5ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 4) [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mAddress Load (0.3ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 2) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mAddress Load (0.3ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 1) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 70ms (View: 57, DB: 6) | 200 OK [http://localhost/feed.rss]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-01-21 22:02:48) [PUT]
+  Parameters: {"user"=>{"photo"=>#<File:/var/folders/JS/JSL5hVro2RaoDE+1YxidEU+++TI/-Tmp-/CGI.78496.14>, "password_confirmation"=>"[FILTERED]", "admin"=>"1", "phone"=>"555-555-1212", "first_name"=>"Adam", "password"=>"[FILTERED]", "last_name"=>"Columbus", "email"=>"admin@admin.com"}, "commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "id"=>"1", "controller"=>"users", "address"=>{"city"=>"Columbus", "zip"=>"43220", "street1"=>"1121 Millcreek Ln", "street2"=>"", "state"=>"OH"}}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mAddress Load (0.5ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+[paperclip] Assigning #<File:/var/folders/JS/JSL5hVro2RaoDE+1YxidEU+++TI/-Tmp-/CGI.78496.14> to photo
+[paperclip] Writing attributes for photo
+[paperclip] Post-processing photo
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE "users" SET "photo_content_type" = 'image/jpeg', "photo_file_name" = 'Photo_25.jpg', "photo_updated_at" = '2009-01-22 03:02:49', "photo_file_size" = 113522, "updated_at" = '2009-01-22 03:02:49' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+[paperclip] Saving files for photo
+[paperclip] Deleting files for photo
+[paperclip] Writing files for photo
+[paperclip] -> /Users/awinter/Documents/graduate school/harvard/CSCI-E168 Ruby Rails/final project/addressbook/public/system/photos/1/original/Photo_25.jpg
+  [4;35;1mAddressChange Create (0.9ms)[0m   [0mINSERT INTO "address_changes" ("updated_at", "address_id", "created_at") VALUES('2009-01-22 03:02:49', 1, '2009-01-22 03:02:49')[0m
+Redirected to #<User:0x390f620>
+Completed in 746ms (DB: 3) | 302 Found [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-01-21 22:02:50) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mAddress Load (0.5ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+[paperclip] Paperclip attachment photo on User initialized.
+Completed in 36ms (View: 10, DB: 1) | 200 OK [http://localhost/users/1]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2009-01-21 22:02:57) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Cookie set: user_credentials=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://localhost:3000/user_session/new
+Completed in 18ms (DB: 0) | 302 Found [http://localhost/user_session]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-01-21 22:02:57) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 187ms (View: 7, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-01-21 22:02:59) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"password"=>"[FILTERED]", "remember_me"=>"0", "email"=>"admin@admin.com"}, "action"=>"create", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'admin@admin.com') LIMIT 1[0m
+[paperclip] Saving attachments.
+[paperclip] Paperclip attachment photo on User initialized.
+[paperclip] Saving files for photo
+[paperclip] Deleting files for photo
+[paperclip] Writing files for photo
+Cookie set: user_credentials=64216bc9f22685188da729891a088e828125406109b543549a00593751880418e6c1dc113e6106fe6197826179d8d7c683ab8dff43145f27a4dfcddf8d670f9c; path=/
+Redirected to /users
+Completed in 38ms (DB: 0) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-21 22:02:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (1.2ms)
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+Rendered users/_info_window (0.4ms)
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 3) LIMIT 1[0m
+Rendered users/_info_window (0.3ms)
+  [4;35;1mAddress Load (0.3ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 4) LIMIT 1[0m
+Rendered users/_info_window (0.3ms)
+  [4;36;1mAddress Load (0.3ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 5) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (0.9ms)
+Rendering template within layouts/application
+Rendering users/index
+Completed in 54ms (View: 14, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-01-21 22:03:46) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (8.0ms)
+Completed in 38ms (View: 15, DB: 1) | 200 OK [http://localhost/users/1/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-01-21 22:03:58) [PUT]
+  Parameters: {"user"=>{"photo"=>"", "password_confirmation"=>"[FILTERED]", "admin"=>"1", "phone"=>"614-555-1212", "first_name"=>"Adam", "password"=>"[FILTERED]", "last_name"=>"Columbus", "email"=>"admin@admin.com"}, "commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "id"=>"1", "controller"=>"users", "address"=>{"city"=>"Columbus", "zip"=>"43220", "street1"=>"1121 Millcreek Ln", "street2"=>"", "state"=>"OH"}}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mAddress Load (0.8ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "phone" = '614-555-1212', "updated_at" = '2009-01-22 03:03:58' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+[paperclip] Saving files for photo
+[paperclip] Deleting files for photo
+[paperclip] Writing files for photo
+  [4;36;1mAddressChange Create (0.6ms)[0m   [0;1mINSERT INTO "address_changes" ("updated_at", "address_id", "created_at") VALUES('2009-01-22 03:03:59', 1, '2009-01-22 03:03:59')[0m
+Redirected to #<User:0x36f7ab8>
+Completed in 1236ms (DB: 3) | 302 Found [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-01-21 22:03:59) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+[paperclip] Paperclip attachment photo on User initialized.
+Completed in 30ms (View: 8, DB: 1) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-21 22:04:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mAddress Load (0.6ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (1.1ms)
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+Rendered users/_info_window (0.3ms)
+  [4;35;1mAddress Load (0.3ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 3) LIMIT 1[0m
+Rendered users/_info_window (0.3ms)
+  [4;36;1mAddress Load (0.3ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 4) LIMIT 1[0m
+Rendered users/_info_window (0.3ms)
+  [4;35;1mAddress Load (0.3ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 5) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (0.9ms)
+Rendering template within layouts/application
+Rendering users/index
+Completed in 241ms (View: 12, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-01-21 22:04:09) [GET]
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"users"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mAddress Load (0.5ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (9.8ms)
+Completed in 50ms (View: 19, DB: 1) | 200 OK [http://localhost/users/3/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-01-21 22:04:14) [PUT]
+  Parameters: {"user"=>{"photo"=>"", "password_confirmation"=>"[FILTERED]", "admin"=>"0", "phone"=>"512-555-1212", "first_name"=>"Adam", "password"=>"[FILTERED]", "last_name"=>"Austin", "email"=>"tester3@foo.com"}, "commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "id"=>"3", "controller"=>"users", "address"=>{"city"=>"", "zip"=>"78729", "street1"=>"", "street2"=>"", "state"=>""}}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 3) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "phone" = '512-555-1212', "updated_at" = '2009-01-22 03:04:14' WHERE "id" = 3[0m
+[paperclip] Saving attachments.
+[paperclip] Saving files for photo
+[paperclip] Deleting files for photo
+[paperclip] Writing files for photo
+  [4;35;1mAddressChange Create (1.6ms)[0m   [0mINSERT INTO "address_changes" ("updated_at", "address_id", "created_at") VALUES('2009-01-22 03:04:15', 3, '2009-01-22 03:04:15')[0m
+Redirected to #<User:0x31ef00c>
+Completed in 233ms (DB: 4) | 302 Found [http://localhost/users/3]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-01-21 22:04:15) [GET]
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"users"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mAddress Load (0.5ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 34ms (View: 10, DB: 1) | 200 OK [http://localhost/users/3]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-21 22:04:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (1.3ms)
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+Rendered users/_info_window (0.3ms)
+  [4;36;1mAddress Load (0.3ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 3) LIMIT 1[0m
+Rendered users/_info_window (0.3ms)
+  [4;35;1mAddress Load (0.3ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 4) LIMIT 1[0m
+Rendered users/_info_window (0.3ms)
+  [4;36;1mAddress Load (0.5ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 5) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (1.1ms)
+Rendering template within layouts/application
+Rendering users/index
+Completed in 51ms (View: 10, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-01-21 22:04:50) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (7.3ms)
+Completed in 38ms (View: 15, DB: 1) | 200 OK [http://localhost/users/2/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-01-21 22:05:14) [PUT]
+  Parameters: {"user"=>{"photo"=>"", "password_confirmation"=>"[FILTERED]", "admin"=>"0", "phone"=>"617-555-1212", "first_name"=>"Adam", "password"=>"[FILTERED]", "last_name"=>"Newton", "email"=>"tester2@foo.com"}, "commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"822f755de4aef710252d04537480ce54c3458124", "id"=>"2", "controller"=>"users", "address"=>{"city"=>"", "zip"=>"02466", "street1"=>"", "street2"=>"", "state"=>""}}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mAddress Load (0.5ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "phone" = '617-555-1212', "updated_at" = '2009-01-22 03:05:14' WHERE "id" = 2[0m
+[paperclip] Saving attachments.
+[paperclip] Saving files for photo
+[paperclip] Deleting files for photo
+[paperclip] Writing files for photo
+  [4;36;1mAddressChange Create (0.5ms)[0m   [0;1mINSERT INTO "address_changes" ("updated_at", "address_id", "created_at") VALUES('2009-01-22 03:05:14', 2, '2009-01-22 03:05:14')[0m
+Redirected to #<User:0x378910c>
+Completed in 291ms (DB: 2) | 302 Found [http://localhost/users/2]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-01-21 22:05:14) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"users"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 33ms (View: 9, DB: 1) | 200 OK [http://localhost/users/2]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-21 22:05:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (3.3ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mAddress Load (1.1ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (2.0ms)
+  [4;36;1mAddress Load (0.5ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+Rendered users/_info_window (0.4ms)
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 3) LIMIT 1[0m
+Rendered users/_info_window (0.4ms)
+  [4;36;1mAddress Load (0.4ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 4) LIMIT 1[0m
+Rendered users/_info_window (0.4ms)
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 5) LIMIT 1[0m
+[paperclip] Paperclip attachment photo on User initialized.
+Rendered users/_info_window (1.0ms)
+Rendering template within layouts/application
+Rendering users/index
+Completed in 260ms (View: 195, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-21 22:05:37) [GET]
+  Parameters: {"friends_only"=>"true", "action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mAddress Load (0.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" INNER JOIN "friendships" ON "users".id = "friendships".friend_id WHERE ("friendships".user_id = 1 ) [0m
+  [4;35;1mAddress Load (1.4ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 2) LIMIT 1[0m
+Rendered users/_info_window (0.4ms)
+  [4;36;1mAddress Load (0.5ms)[0m   [0;1mSELECT * FROM "addresses" WHERE ("addresses".user_id = 3) LIMIT 1[0m
+Rendered users/_info_window (0.4ms)
+  [4;35;1mAddress Load (0.5ms)[0m   [0mSELECT * FROM "addresses" WHERE ("addresses".user_id = 4) LIMIT 1[0m
+Rendered users/_info_window (0.4ms)
+Rendering template within layouts/application
+Rendering users/index
+Completed in 63ms (View: 17, DB: 0) | 200 OK [http://localhost/users?friends_only=true]
