@@ -95,7 +95,7 @@ RSS:
 * Authlogic - used for user authentication. I was recommended to this, and felt that it had a more Ruby way of functioning, rather than Restful Authentication's generator-based approach.
 * Paperclip - used to attach files in a way that integrates well with ActiveRecord
 
-==Rails Plugins (included in application)
+===Rails Plugins (included in application)
 * ym4r/gm - used for easy integration of Google Maps with Rails
 
 ==Crow
