@@ -10,8 +10,8 @@
 Address Book with Google Maps Integration (snazzy name due in version 2.0) 
 is intended as a way to keep track of the geographical movement of friends. 
 Often we are at organizations or educational institutions, and we'd like to 
-keep track of a peers and where they are located. This app combines the 
-functionality of a shared address book with integration to Google Maps.
+keep track of a peers and where they are located after we part ways. This app 
+combines the functionality of a shared address book with integration to Google Maps.
 
 ==Quick Start
 
@@ -88,7 +88,7 @@ RSS:
 ===Features
 * Integration with Google Maps. Includes flyout windows
 * Uploading. Users can upload their photos. They will be displayed in Google Markers as well as their profile.
-* Feeds. The application provides an RSS Feed notifying subscribers when someone moves.
+* Feeds. The application provides an RSS Feed notifying subscribers when someone moves. The feed is available sitewide, or can be accessed directly at /feed.rss.
 
 ===3rd Party Gems (included in application)
 * Geokit::Geocoders - used to encode addresses to coordinates
@@ -104,7 +104,7 @@ RSS:
 * Using Git - This was my first project done using git
 * Using GitHub - This was my first project using GitHub, and so the code is published out there
 * I took the advice on learning from multiple sources and talked with members of the Columbus Ruby Brigade. They gave me the tip on using Authlogic over Restful Authentication.
-* Also, I recently went to the CodeMash conference. There I had the opportunity to refresh my core Ruby skills and get back into the Ruby mindset. They offered a great tutorial. Check out +vendor/koans/rubykoans.tgz+. The class was taught be Jim Weirich and Joe O'Brien of EdgeCase.
+* Also, I recently went to the CodeMash conference. There I had the opportunity to refresh my core Ruby skills and get back into the Ruby mindset. They offered a great tutorial. Check out vendor/koans/rubykoans.tgz. The class was taught be Jim Weirich and Joe O'Brien of EdgeCase.
 
 ==Project Files
 Here are the important files that make up this project:
