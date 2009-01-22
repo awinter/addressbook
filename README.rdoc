@@ -3,9 +3,9 @@
   Harvard CSCI E-168, Fall 2008
   Project: Final Project
   By: Adam Winter
-  email: awinter@fas.harvard.edu
+  Email: awinter@fas.harvard.edu
   Due date: Wednesday, January 21, 2009
-  source: http://github.com/awinter/addressbook
+  Source: http://github.com/awinter/addressbook
 
 Address Book with Google Maps Integration (snazzy name due in version 2.0) 
 is intended as a way to keep track of the geographical movement of friends. 
@@ -16,7 +16,7 @@ functionality of a shared address book with integration to Google Maps.
 ==Quick Start
 
 This is a standard rails app. There are some third party gems that are required; however 
-those have been unpacked into the app's vendor directory.
+those have been unpacked into the app's vendor directory, so you do not need to worry about them.
 
 To start the app, run:
   script/server
@@ -27,10 +27,13 @@ obtaining a new key.
 
 Initially, the following users are in the system:
 * admin@admin.com, password: foofoo, admin: true
-* tester2@foo.com, password: foofoo, admin: flase
-* tester3@foo.com, password: foofoo, admin: flase
-* tester4@foo.com, password: foofoo, admin: flase
-* tester5@foo.com, password: foofoo, admin: flase
+* tester2@foo.com, password: foofoo, admin: false
+* tester3@foo.com, password: foofoo, admin: false
+* tester4@foo.com, password: foofoo, admin: false
+* tester5@foo.com, password: foofoo, admin: false
+
+If you want your own users, you can reset the database by running:
+  rake db:reset
 
 If you reset the database, you will likely want to designate at least one user as an admin 
 user. To do that with your first user, use the following steps:
@@ -39,15 +42,29 @@ user. To do that with your first user, use the following steps:
   u.admin = true
   u.save
 
+Admin users can delete other users and assign friends to other users.
+
 ==Use Cases
 
+Login:
   John is a user of the system.
   He can log in, and see his or anyone else’s address.
-  He may also view a may will all address entries super-imposed on top of it.
+  He may also view a map with all address entries super-imposed on top of it.
 
+Designate Friends:
+  Barry knows all the people in the system, hence why he can see everyone's contact information.
+  However a few people he considers to be his close friends.
+  He can designate who his close friends are.
+
+View Friends:
+  Even though Jill had 100 classmates, she really only cares to see where her 10 closest friend are.
+  When she views that map, she wants the option to just see where her friends are. 
+
+Admin:
   Adam is an admin user of the system.
   He can perform all the functions of a user, but in addition, he can add and remove users from the system.
- 
+
+RSS: 
   Joe likes to keep tabs on his friends and know where they are.
   He can subscribe to an RSS feed that alerts him to any change in the address of his friends.
 
